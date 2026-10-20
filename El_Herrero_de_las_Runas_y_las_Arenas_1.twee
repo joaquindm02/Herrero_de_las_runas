@@ -1,0 +1,924 @@
+:: StoryTitle
+El Herrero de las Runas y las Arenas
+
+
+:: StoryData
+{
+  "ifid": "0276EF2B-0D31-4FE2-BD93-837D423D7ABB",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Una vida vikinga",
+  "tag-colors": {
+    "PERDER": "red",
+    "GANAR": "green",
+    "Decision": "yellow",
+    "Fase": "blue"
+  },
+  "zoom": 0.6
+}
+
+
+:: 1. MUNDO ORDINARIO [Fase] {"position":"600,150","size":"100,100"}
+Fase 1
+
+
+:: 10. CAMINO DE REGRESO [Fase] {"position":"2700,150","size":"100,100"}
+Fase 10
+
+
+:: 11. RESURRECCIÓN [Fase] {"position":"2850,150","size":"100,100"}
+Fase 11
+
+
+:: 12. REGRESO CON EL ELIXIR [Fase] {"position":"3000,150","size":"100,100"}
+Fase 12
+
+
+:: 2. LLAMADA A LA AVENTURA [Fase] {"position":"750,150","size":"100,100"}
+Fase 2
+
+
+:: 3. RECHAZO DE LA LLAMADA [Fase] {"position":"900,150","size":"100,100"}
+Fase 3
+
+
+:: 4. ENCUENTRO CON EL MENTOR [Fase] {"position":"1050,150","size":"100,100"}
+Fase 4
+
+
+:: 5. CRUCE DEL UMBRAL [Fase] {"position":"1200,150","size":"100,100"}
+Fase 5
+
+
+:: 6. PRUEBAS, ALIADOS Y ENEMIGOS [Fase] {"position":"1350,150","size":"100,100"}
+Fase 6
+
+
+:: 7. ACERCAMIENTO [Fase] {"position":"2100,150","size":"100,100"}
+Fase 7
+
+
+:: 8. LA GRAN PRUEBA [Fase] {"position":"2250,150","size":"100,100"}
+Fase 8
+
+
+:: 9. RECOMPENSA [Fase] {"position":"2550,150","size":"100,100"}
+Fase 9
+
+
+:: Conflicto interno [Decision] {"position":"900,450","size":"100,100"}
+No se lo he contado a nadie, pero empiezo a sospechar que el sueño es una señal. Que yo soy el elegido.
+
+La idea no me gusta para nada. Ser el elegido significaría dejar mi aldea y viajar por tierras de extranjeros. Solo pensarlo me revuelve el estómago.
+
+"No soy yo", me repito. "Es solo un sueño."
+
+Pero la pesadilla se vuelve cada vez más fuerte, hasta que una noche sueño con mi propia aldea en llamas.
+
+[[Contarle a Ralf lo que he soñado->En busca de la verdad]]
+[[Callar y defender la aldea yo mismo->Martillo y negación]]
+
+
+:: Echar al mercader {"position":"600,600","size":"100,100"}
+—¡Fuera de aquí! —le grito—. En esta herrería se forja el mejor acero del mundo. No necesito la basura del sur.
+
+Tomo su espada y la lanzo a la nieve. El mercader la recoge y se va sin decir nada.
+
+Cuando me doy vuelta, Sigrid me mira desde la puerta.
+
+—Yo quería verla de cerca —dice, decepcionada.
+
+[[Continuar->Se anuncia una visión]]
+
+
+:: El acero del sur {"position":"600,750","size":"100,100"}
+Tomo la espada y la pruebo contra un tronco. Corta más limpio que cualquiera de las mías. Me quedo un momento mirando las ondas del metal, sin entender cómo se hacen.
+
+—¿Y? —pregunta el mercader, sonriendo.
+
+—Basura del sur —le digo, y se la devuelvo.
+
+Pero esa noche no puedo dejar de pensar en esas ondas.
+
+[[Continuar->Se anuncia una visión]]
+
+
+:: El bosque de Gisela [Decision] {"position":"1500,300","size":"100,100"}
+El símbolo del árbol nos lleva a las tierras de los germanos, a un bosque tan espeso que de día parece de noche.
+
+En la entrada nos espera una mujer con un arco más alto que ella.
+
+—Me llamo Gisela —dice, sin sonreír—. Sé lo que buscan: está en el roble más viejo de este bosque. Puedo llevarlos.
+
+—Perfecto —le digo—. Vamos.
+
+—Pero en mi bosque ningún extranjero camina armado. Tu espada, vikingo.
+
+Thorgrim escupe al suelo.
+
+—Ni lo pienses, muchacho.
+
+Miro mi espada. Nunca se la he entregado a nadie.
+
+[[Entregar la espada->Sin espada]]
+[[Entrar solo al bosque->PERDER - Perdidos en el bosque]]
+
+
+:: El duelo [Decision] {"position":"2850,600","size":"100,100"}
+—Gisela, Aisha, al bosque —ordeno—. (if: $ottavio)[Calipso, Ottavio, ustedes curen a los heridos.](else:)[Calipso, tú cura a los heridos.] Los demás, tomen sus armas.
+
+Cada uno ocupa su lugar y la defensa resiste. El ataque se detiene.
+
+Entonces Thorgrim avanza solo hasta el centro del campo.
+
+—¡Asvald! —grita—. ¡Un duelo, frente a todos! ¡Que el norte vea quién tiene la razón!
+
+Acepto. Pero esta vez no peleo solo con fuerza: me muevo con la paciencia de una cazadora, la calma de un sabio y la ligereza de una bailarina. Peleo con humildad, y con todo lo que aprendí de cada cultura.
+
+Su martillo choca contra la espada maestra, y es el martillo el que se quiebra. Thorgrim cae de rodillas, desarmado.
+
+Todo el norte está mirando.
+
+[[Matar a Thorgrim->PERDER - Sangre en la nieve]]
+[[Perdonarle la vida->La verdad]]
+
+
+:: El ejército del norte [Decision] {"position":"2850,300","size":"100,100"}
+Mi aldea está rodeada. Thorgrim llegó antes que nosotros y convocó a las aldeas vikingas del extremo norte, las más cerradas y violentas.
+
+—¡Ahí está el traidor! —grita Thorgrim al vernos—. ¡El que trajo a los extranjeros a nuestras tierras!
+
+Cientos de guerreros esperan frente a la entrada de la aldea. Detrás, mi familia y mi pueblo resisten como pueden.
+
+Empuño la espada maestra y siento su poder recorrerme el brazo. Por un momento, creo que podría con todos ellos.
+
+[[Atacar solo con la espada maestra->PERDER - El último vikingo]]
+[[Detenerme a pensar->Todos para uno y uno para todos]]
+
+
+:: El fin [GANAR] {"position":"3000,300","size":"100,100"}
+Vuelvo a mi herrería, pero ya no soy el mismo. Abro las puertas de mi taller a todo el pueblo y enseño lo que aprendí de cada uno de mis amigos.
+
+Algunos se quedan en el norte; otros vuelven a sus tierras. Desde entonces, llegan barcos de comercio cada verano.
+
+Aisha se queda conmigo.
+
+—Algún día voy a forjar una espada mejor que la tuya —me dice Sigrid, como siempre.
+
+—Algún día —le respondo, sonriendo—. Y te voy a enseñar todo lo que sé. Lo de aquí, y lo de allá.
+
+Mi aldea entendió que el peligro nunca fueron los extranjeros, sino el miedo a lo distinto. Partí como un guerrero terco. Volví como un maestro.
+
+(text-color:green)[EL FIN]
+
+[[Jugar de nuevo->Una vida vikinga]]
+
+
+:: El pasado de Thorgrim {"position":"2100,450","size":"100,100"}
+Una noche en el desierto, junto al fuego, Thorgrim habla por primera vez de sí mismo.
+
+—Cuando era niño, me capturaron en un saqueo —dice, mirando las llamas—. Me vendieron como esclavo en estas tierras. Pasé por las manos de muchos amos, de muchas culturas. Todos iguales. Hasta que un día escapé y volví al norte.
+
+—¿Dónde fue? —le pregunto.
+
+No responde.
+
+—Por eso desprecio a los extranjeros, muchacho. Tú también los despreciabas. ¿Qué te pasó?
+
+No sé qué responder. Hace unos meses habría pensado exactamente igual que él.
+
+[[Continuar->La propuesta de Thorgrim]]
+
+
+:: El pueblo del pasado {"position":"2250,300","size":"100,100"}
+—No, Thorgrim —le digo—. Ellos vienen conmigo.
+
+Thorgrim me mira largo rato. Luego vuelve a acostarse sin decir nada.
+
+Días después llegamos al pueblo de Aisha, escondido entre dunas y rocas. Nos recibe su abuelo, un anciano de barba blanca.
+
+—He cuidado la entrada de la forja toda mi vida —nos dice—. Síganme.
+
+Nos guía por un pasadizo hacia el corazón de la montaña. Thorgrim camina en silencio detrás de todos. Desde que entramos al pueblo, está pálido.
+
+[[Seguir al anciano->El reencuentro]]
+
+
+:: El reencuentro {"position":"2250,450","size":"100,100"}
+Frente a la forja, a la luz de las antorchas, el abuelo de Aisha mira por primera vez a Thorgrim a la cara. Los dos se quedan inmóviles.
+
+—Tú... —susurra Thorgrim.
+
+El anciano palidece.
+
+—No puede ser...
+
+Thorgrim lo ha reconocido. Es el hombre que lo compró cuando era niño. El hombre que lo hizo esclavo.
+
+Veo cómo su mano baja lentamente hacia el martillo.
+
+[[Continuar->La pérdida de un aliado]]
+
+
+:: El sueño {"position":"900,300","size":"100,100"}
+Pasan los días y sigo teniendo la misma pesadilla. Veo ciudades que nunca he visitado, pueblos con ropas y templos extraños, y todos caen uno tras otro bajo un cielo rojo.
+
+Me despierto cada noche empapado en sudor. ¿Por qué sigo soñando lo mismo? ¿Por qué yo?
+
+[[Continuar->Conflicto interno]]
+
+
+:: El temple {"position":"2550,600","size":"100,100"}
+Respiro hondo y golpeo el metal al ritmo que me enseñó mi padre, pero siguiendo los consejos de cada uno de mis amigos. Por primera vez en mi vida, no forjo solo.
+
+Falta el último paso: enfriar la hoja para templarla.
+(if: $ottavio is true)[
+—¡Esperen! —grita Ottavio, destapando una de sus ánforas—. ¡Les dije que el aceite servía hasta para el acero!
+
+Hundo la hoja en el aceite. Sale flexible y dura a la vez, con ondas que parecen olas. Es la espada maestra. Ningún pueblo podría haberla forjado solo.
+
+[[Volver al norte->Perdidos en el fin del mundo]]
+](else:)[
+No hay aceite, así que la enfrío en agua, como siempre. Se escucha un crujido y una grieta recorre la hoja de punta a punta.
+
+—¿No había un cocinero que hablaba de aceite y acero? —murmura Klas.
+
+[[Continuar->PERDER - Acero quebradizo]]
+]
+
+
+:: El último acertijo {"position":"2100,300","size":"100,100"}
+Bagdad es la ciudad más grande que he visto en mi vida: mercados interminables, bibliotecas, cúpulas doradas y un río lleno de barcos.
+
+En el mercado, una bailarina se mueve entre la gente con una gracia que nunca había visto. Se llama Aisha, y todos la llaman "dedos de seda". No puedo dejar de mirarla, y no sé muy bien por qué.
+
+El último acertijo de la tabla no es un texto: es un pequeño mecanismo escondido en el metal. Lo intento durante horas, pero mis manos de herrero son demasiado gruesas.
+
+—¿Me permites? —dice Aisha, acercándose.
+
+Lo abre en segundos. Dentro aparece un mapa.
+
+—Esto... —dice, sorprendida—. Este es mi pueblo. Está en el desierto. Yo los llevaré.
+
+[[Partir al desierto->El pasado de Thorgrim]]
+
+
+:: En busca de la verdad {"position":"1050,300","size":"100,100"}
+Desconcertado, voy a ver a Ralf. Me recibe en su casa, junto al fuego.
+
+—Te estaba esperando, Asvald —me dice, como si ya supiera a qué vengo.
+
+Le cuento todo: las ciudades extrañas, el cielo rojo, mi aldea en llamas. Ralf me escucha en silencio, sin interrumpirme. Cuando termino, me mira fijo.
+
+—Ya no tengo dudas —dice—. Tú eres el elegido.
+
+[[Continuar->La revelación]]
+
+
+:: Entre las cenizas {"position":"2550,300","size":"100,100"}
+Tomo la mano de Aisha y ella me arrastra detrás de la columna, mientras las flechas de Gisela obligan a Thorgrim a retroceder.
+
+—¡Esto no termina aquí! —grita Thorgrim.
+
+Furioso, descarga su martillo contra los pilares hasta que el techo se derrumba sobre la forja. Luego desaparece en la noche. Mis amigos están a salvo.
+
+Calipso cura mis heridas durante días. Cuando por fin puedo levantarme, la Forja de Hefesto es solo un montón de piedras.
+
+—Asvald, mira esto —dice Aisha. Con el derrumbe, la tabla se partió, y por dentro hay un último acertijo escondido.
+
+Hakan lo traduce en voz alta:
+
+—"La forja nunca fue de piedra. Arde donde se juntan las manos de todos los pueblos."
+
+Por fin lo entiendo. No necesitamos la forja. Nos necesitamos entre nosotros.
+
+[[Construir una forja nueva->La espada maestra]]
+
+
+:: Klas y las estrellas {"position":"1350,600","size":"100,100"}
+Suspiro.
+
+—Está bien. Habla.
+
+Klas sonríe y apunta al cielo.
+
+—Todas las estrellas giran durante la noche, menos una: la estrella polar. Siempre marca el norte. Si le das la espalda, vas hacia el sur.
+
+—La estrella polar —digo en voz alta.
+
+Las runas de la tabla brillan y aparece un nuevo símbolo: un árbol.
+
+—¿Puedo ir con ustedes? —pregunta Klas, emocionado—. Nunca he visto las estrellas de otras tierras.
+
+Thorgrim gruñe. Lo pienso un momento.
+
+—Está bien —acepto a regañadientes—. Pero no hables tanto.
+
+—No prometo nada.
+
+[[Navegar al sur->El bosque de Gisela]]
+
+
+:: La aldea de Klas [Decision] {"position":"1350,450","size":"100,100"}
+Nuestra primera parada es una aldea vikinga lejana. Es muy distinta a la mía: está llena de mercaderes de muchas tierras, y a nadie parece molestarle.
+
+Ahí conocemos a Klas, un vikingo flaco y chistoso que no para de hablar.
+
+—¿Así que vienen del norte frío? —dice, dándome palmadas en la espalda—. ¿Sabían que desde allá las estrellas se ven distinto? Por ejemplo, hay una que...
+
+Lo ignoro y leo en voz alta el primer acertijo de la tabla:
+
+"Todos giran a mi alrededor, pero yo nunca me muevo. Dame la espalda y encontrarás el camino."
+
+—¡Ah, pero eso es fácil! —dice Klas—. Es...
+
+Levanto la mano para que se calle. Puedo resolverlo solo.
+
+[[Responder: "El sol"->PERDER - Perdidos en el mar abierto]]
+[[Responder: "Odín"->La tabla no responde]]
+[[Dejar que Klas hable->Klas y las estrellas]]
+
+
+:: La aventura {"position":"1350,300","size":"100,100"}
+Al amanecer, la tormenta ha pasado. Thorgrim mira el cielo y fija el rumbo sin decir nada. Tenía razón, y los dos lo sabemos.
+
+Saco la tabla y repaso lo que me explicó Ralf: en cada lugar del camino hay un acertijo, y solo alguien de esa tierra puede ayudarme a resolverlo. Cada respuesta revela el siguiente destino, y quien me ayude podrá unirse al viaje.
+
+"No necesito ayuda de nadie", pienso. Todavía no sé lo equivocado que estoy.
+
+[[Llegar a la primera aldea->La aldea de Klas]]
+
+
+:: La disculpa {"position":"1650,750","size":"100,100"}
+(set: $ottavio to true)
+Vuelvo a la cocina con la cabeza gacha. Pedir perdón me cuesta más que cualquier combate.
+
+—Ottavio... lo siento. Fui un bruto.
+
+Ottavio me mira largo rato. Luego, sin decir nada, me sirve un plato. Como. Está delicioso.
+
+—Disculpas aceptadas —dice al fin, conmovido—. Y voy con ustedes.
+
+Carga diez ánforas de aceite en el barco.
+
+—Sirve para todo: para cocinar, para curar... ¡hasta para el acero!
+
+[[Navegar a Grecia->La fiebre]]
+
+
+:: La espada maestra [Decision] {"position":"2550,450","size":"100,100"}
+Entre las ruinas armamos una forja improvisada, y cada uno aporta lo suyo.
+
+—Un fuelle hecho con pieles de mi caza —dice Gisela.
+
+—Esta noche las estrellas estarán perfectas —dice Klas, mirando el cielo.
+
+—Estas plantas, mezcladas con el carbón, hacen más fuerte el acero —explica Calipso.
+
+—Las inscripciones de los muros dicen cómo empezar —traduce Hakan.
+
+Aisha toma el metal y, con sus dedos de seda, dibuja en él un patrón de ondas.
+
+Pero cuando llega el momento de golpear, dudo. Mi padre me enseñó a forjar de una sola manera: la manera vikinga. Es lo único que conozco de verdad.
+
+[[Forjar a la vikinga->PERDER - Acero quebradizo]]
+[[Combinar todas las técnicas->El temple]]
+
+
+:: La fiebre [Decision] {"position":"1800,300","size":"100,100"}
+En el viaje hacia Grecia, Klas cae enfermo. Arde en fiebre y ya no reconoce a nadie.
+
+Al llegar a las ruinas de un templo encontramos a una joven recogiendo plantas entre las columnas. Se llama Calipso y es herborista. Casi sin mirarnos a los ojos, se acerca a Klas.
+
+—Tengo... tengo unas hierbas que pueden ayudarlo —dice en voz baja—. Hay que preparar una infusión.
+
+Thorgrim la aparta.
+
+—En el norte la fiebre se cura con fuego. Se le hace sudar junto a las brasas y se le da hidromiel. Así se ha hecho siempre.
+
+Los dos me miran, esperando que decida.
+
+[[Confiar en las hierbas de Calipso->Las hierbas de Calipso]]
+[[Curarlo como en el norte->PERDER - La fiebre del norte]]
+
+
+:: La forja [Decision] {"position":"2400,300","size":"100,100"}
+Thorgrim se lanza contra mis amigos. Me interpongo en su camino para defenderlos.
+
+—¡Si quieres llegar a ellos, tendrás que pasar por mí!
+
+—Con gusto —responde.
+
+Es más fuerte que yo y está ciego de rabia. Al tercer golpe, su martillo parte mi espada en dos. El siguiente me lanza contra el yunque. Quedo en el suelo, sangrando, con media espada en la mano, mientras Thorgrim se acerca para terminar conmigo.
+
+—¡Asvald, ven! —me llama Aisha, tendiéndome la mano desde detrás de una columna.
+
+Gisela tensa su arco.
+
+[[Atacar solo con la espada rota->PERDER - El martillo de Thorgrim]]
+[[Aceptar la ayuda de mis amigos->Entre las cenizas]]
+
+
+:: La frontera [Decision] {"position":"1950,300","size":"100,100"}
+El camino hacia el oriente está cerrado por una ciudad amurallada.
+
+—Ningún extranjero armado pasa por aquí —nos dice un guardia, cruzando su lanza frente a nosotros.
+
+Junto a la puerta, un hombre de túnica nos observa con curiosidad. Se presenta como Hakan, un clérigo turco. Nos habla en nuestro idioma, luego al guardia en el suyo y después a un mercader en un tercero.
+
+—Déjenme hablar con los guardias —propone—. Las palabras abren más puertas que las espadas.
+
+Thorgrim me lleva aparte.
+
+—No confíes en este sacerdote, muchacho. Nos va a vender a la primera. Esta noche escalamos el muro por el lado norte. Es lo más seguro.
+
+[[Dejar que Hakan hable->Las palabras de Hakan]]
+[[Seguir el plan de Thorgrim->PERDER - Prisioneros]]
+
+
+:: La mesa de Ottavio [Decision] {"position":"1650,300","size":"100,100"}
+(set: $ottavio to false)
+El mensaje nos lleva a una ciudad en las tierras de Italia, con casas de piedra y un mar color turquesa. El acertijo de la tabla habla de "lo que el sur pone en la mesa".
+
+En el puerto nos recibe Ottavio, un cocinero que suspira con cada palabra.
+
+—¡Viajeros! ¡Bienvenidos! —dice, abriendo los brazos—. Pero primero se come, y después se habla de acertijos.
+
+Nos sienta frente a un banquete: pan, queso, aceitunas, vino y un aceite dorado que trata como si fuera un tesoro.
+
+Miro los platos con desconfianza. Huele raro. Nada de esto parece comida de verdad.
+
+[[Comer el banquete->Ottavio se une]]
+[[Rechazar la comida->Un plato roto]]
+
+
+:: La pesadilla {"position":"750,450","size":"100,100"}
+Vuelvo a casa con mis padres. Nadie habla durante la cena.
+
+—Si el fin del mundo se acerca, ¿estaremos a salvo mientras aparece ese elegido? —pregunta mi madre.
+
+Mi padre no responde.
+
+Antes de dormir, voy a ver a Sigrid y le doy un beso en la frente.
+
+—¿Tú nos vas a proteger, Asvald? —me pregunta, medio dormida.
+
+—Siempre —le digo.
+
+Esa misma noche, sueño con el fin del mundo.
+
+[[Continuar->El sueño]]
+
+
+:: La primera tormenta [Decision] {"position":"1200,450","size":"100,100"}
+La primera noche en alta mar estalla una tormenta enorme. Las olas golpean el barco como martillos.
+
+—¡Echen el ancla junto a esas rocas! —grita Thorgrim—. ¡Hay que esperar a que pase! Contra este mar no se gana.
+
+Aprieto los dientes. Nunca he perdido contra nada, y no pienso empezar ahora.
+
+—¡Podemos cruzarla! —le grito—. ¡Solo hay que remar más fuerte!
+
+[[Hacerle caso a Thorgrim y esperar->La aventura]]
+[[Atravesar la tormenta a la fuerza->PERDER - Tragados por el mar]]
+
+
+:: La propuesta de Thorgrim [Decision] {"position":"2100,600","size":"100,100"}
+Esa noche, mientras los demás duermen, Thorgrim me despierta.
+
+—Escúchame bien —susurra—. Ya sabemos dónde está la forja. No los necesitamos más. Partamos al amanecer, solos tú y yo. La espada que salve al norte debe ser forjada por manos vikingas, no por esta banda de extranjeros.
+
+Miro a mis compañeros dormidos alrededor del fuego(if: $ottavio)[: Klas, Gisela, Ottavio, Calipso, Hakan y Aisha](else:)[: Klas, Gisela, Calipso, Hakan y Aisha].
+
+[[Irme solo con Thorgrim->PERDER - La sombra del norte]]
+[[Quedarme con mis amigos->El pueblo del pasado]]
+
+
+:: La pérdida de un aliado {"position":"2250,600","size":"100,100"}
+Todo pasa muy rápido.
+
+—¡Me robaste la vida! —grita Thorgrim.
+
+—Eran otros tiempos... yo... —intenta explicar el anciano.
+
+—¡Abuelo! —Aisha se interpone, pero Thorgrim la empuja a un lado.
+
+La discusión se vuelve furia, y la furia se vuelve un golpe de martillo. El abuelo de Aisha cae y no vuelve a levantarse.
+
+Aisha grita. Thorgrim se da vuelta hacia nosotros, con los ojos llenos de odio.
+
+—¡Todos ustedes son iguales! —ruge—. Y tú, Asvald... ¡eres un traidor a tu pueblo!
+
+[[Desenvainar la espada->La forja]]
+
+
+:: La revelación [Decision] {"position":"1050,450","size":"100,100"}
+—Tu camino te llevará hasta la Forja de Hefesto —me explica Ralf—, el dios griego de los herreros. Está en tierras muy lejanas, más allá de todo lo que conoces.
+
+Saca de un cofre una tabla de un metal que nunca había visto, cubierta de acertijos.
+
+—Cada acertijo que resuelvas te mostrará el siguiente paso del camino. Resuélvelos todos y llegarás a la forja.
+
+Dudo antes de tomarla. Ralf lo nota.
+
+—Sé que no confías en los extranjeros, muchacho. Pero el mundo es más grande que nuestra aldea. Y el fin del mundo también.
+
+[[Tomar la tabla->Se izan las velas]]
+[[Rechazarla y pedir que vaya otro->PERDER - Que vaya otro]]
+
+
+:: La tabla no responde {"position":"1350,750","size":"100,100"}
+—¡Odín! —respondo con toda seguridad.
+
+La tabla no hace nada.
+
+Klas se ríe tan fuerte que se cae de la banca. Hasta Thorgrim parece sonreír.
+
+—Amigo —dice Klas, secándose las lágrimas—, Odín se mueve bastante.
+
+Avergonzado, vuelvo a leer el acertijo.
+
+[[Intentarlo de nuevo->La aldea de Klas]]
+
+
+:: La verdad {"position":"2850,750","size":"100,100"}
+Clavo la espada en la nieve, junto a Thorgrim.
+
+—No voy a matarte —le digo—. Lo que te hicieron no se borra, Thorgrim. Pero ese hombre no era todos los extranjeros. Y yo no soy todos los vikingos.
+
+Thorgrim me mira sin entender.
+
+Me giro hacia el ejército y les cuento toda la verdad: la visión de Ralf, el viaje, los acertijos, los amigos que me salvaron y la forja que solo pudo encenderse con las manos de todos los pueblos.
+
+—Me fui de aquí creyendo que éramos mejores que todos —les digo—. Volví sabiendo que solos no somos nada.
+
+Mi pueblo me mira distinto. Ya no soy el vikingo soberbio que se fue: soy un líder humilde. Uno a uno, los guerreros del norte bajan las armas.
+
+Esa noche, por primera vez en meses, el cielo deja de estar rojo. El Ragnarök no era un ejército ni un monstruo: era el odio. Y se detuvo.
+
+[[Continuar->El fin]]
+
+
+:: Las estrellas de Klas {"position":"2700,450","size":"100,100"}
+—Klas, ¿qué miras?
+
+—Ahí —dice, señalando un pequeño hueco entre las nubes rojas—. La que no se mueve.
+
+La estrella polar. La misma del primer acertijo.
+
+—Al principio del viaje había que darle la espalda —dice Klas, sonriendo—. Ahora hay que seguirla para volver a casa.
+
+Klas guía el barco noche tras noche, buscando la estrella entre las nubes. Cuando por fin aparece la costa del norte, veo humo en el horizonte. Viene de mi aldea.
+
+[[Desembarcar->El ejército del norte]]
+
+
+:: Las hierbas de Calipso {"position":"1800,450","size":"100,100"}
+—Hazlo —le digo a Calipso.
+
+Ella prepara la infusión y cuida a Klas toda la noche. Al amanecer, la fiebre ha bajado.
+
+—¿Me perdí de algo? —pregunta Klas con la voz ronca—. Soñé que las estrellas me hablaban en griego.
+
+Calipso sonríe por primera vez. Ya más tranquila, nos muestra una inscripción griega entre las ruinas.
+
+—Habla de Hefesto, el dios herrero de mi pueblo —explica—. Conozco su leyenda desde niña.
+
+La inscripción revela el siguiente destino: un paso hacia el oriente.
+
+—Quiero ir con ustedes —dice Calipso—. Quiero ver la forja con mis propios ojos.
+
+[[Viajar al oriente->La frontera]]
+
+
+:: Las palabras de Hakan {"position":"1950,450","size":"100,100"}
+—Habla con ellos, Hakan.
+
+Hakan conversa con los guardias durante una hora. Hay risas, apretones de manos y hasta una taza de té. Al final, las puertas se abren.
+
+—¿Qué les dijiste? —le pregunto, asombrado.
+
+—La verdad —responde, sonriendo—. Que vienen a salvar el mundo. Y que pagan bien.
+
+En una biblioteca de la ciudad, Hakan traduce la siguiente parte de la tabla: el camino sigue hacia Bagdad.
+
+—Quiero ver cómo termina esta historia —dice—. Si me lo permiten, iré con ustedes.
+
+Thorgrim no dice nada, pero noto que aprieta los puños cada vez que Hakan habla.
+
+[[Viajar a Bagdad->El último acertijo]]
+
+
+:: Los vikingos [Decision] {"position":"600,450","size":"100,100"}
+He peleado en muchos torneos y hoy soy todo un guerrero. Como todos en mi aldea, desprecio lo que no es vikingo. Nuestros dioses son los más poderosos y nuestro acero, el mejor. Eso es lo que siempre nos han enseñado.
+
+Una tarde, un mercader del sur entra a mi herrería. Trae una espada curva, de un acero con extrañas ondas.
+
+—Buen herrero —me dice con un acento raro—, le cambio esta espada por una de las suyas. Es acero de mi tierra. No encontrará otro igual.
+
+[[Echarlo de la herrería->Echar al mercader]]
+[[Probar la espada extranjera->El acero del sur]]
+
+
+:: Martillo y negación [Decision] {"position":"900,600","size":"100,100"}
+Si el fin del mundo viene, que venga. Lo voy a esperar con acero.
+
+Durante semanas trabajo día y noche. Forjo hachas, escudos y lanzas para toda la aldea.
+
+—Hijo, vas a caer rendido —me dice mi padre una noche.
+
+—No necesito profecías ni viajes, padre. Necesito mi martillo.
+
+Pero los sueños empeoran. Ahora veo a Sigrid llamándome entre el humo, y por más que corro, nunca logro llegar a ella.
+
+[[Seguir forjando->PERDER - El herrero que se quedó]]
+[[Tragarme el orgullo e ir donde Ralf->En busca de la verdad]]
+
+
+:: Ottavio se une {"position":"1650,450","size":"100,100"}
+(set: $ottavio to true)
+Pruebo un pedazo de pan con aceite y, para mi sorpresa, no puedo parar de comer.
+
+—¡Ah! ¡Un hombre de buen gusto! —dice Ottavio, feliz—. Ahora sí, el acertijo. Habla del aceite. Bajo mi cocina hay una vieja prensa romana con una inscripción.
+
+Bajamos, y la inscripción encaja con la tabla: el siguiente destino son unas ruinas en Grecia.
+
+—Voy con ustedes —anuncia Ottavio mientras carga diez ánforas en el barco—. Y llevo mi aceite. Sirve para todo: para cocinar, para curar... ¡hasta para el acero!
+
+No le presto mucha atención a eso último.
+
+[[Navegar a Grecia->La fiebre]]
+
+
+:: PERDER - A la deriva en el fin del mundo [PERDER] {"position":"2700,900","size":"100,100"}
+Tomo el timón y sigo mi instinto. Mi instinto se equivoca.
+
+El barco da vueltas en un mar rojo y enloquecido hasta que la última tormenta del mundo se lo traga. Klas había visto la estrella, pero no le pregunté.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->Perdidos en el fin del mundo]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Acero quebradizo [PERDER] {"position":"2550,900","size":"100,100"}
+La espada parece terminada, pero en la primera prueba se parte en dos como si fuera de vidrio. Sin espada y sin forja, no tenemos cómo enfrentar lo que viene, y el Ragnarök cae sobre el mundo.
+
+(if: $ottavio is false)[Quizás un cocinero italiano sabía algo que yo no.
+[[Volver a Italia con Ottavio->La mesa de Ottavio]]
+]
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La espada maestra]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - El herrero que se quedó [PERDER] {"position":"900,900","size":"100,100"}
+El Ragnarök llega una noche sin luna. Mis armas son buenas, pero lo que viene del mar es más grande que cualquier aldea.
+
+Mientras todo arde a mi alrededor, entiendo demasiado tarde que la fuerza de un solo herrero no basta.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->Conflicto interno]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - El martillo de Thorgrim [PERDER] {"position":"2400,900","size":"100,100"}
+Mi orgullo no me deja retroceder. Me levanto y ataco solo, con la espada rota, gritando.
+
+Thorgrim ni siquiera necesita esforzarse.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La forja]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - El último vikingo [PERDER] {"position":"2850,900","size":"100,100"}
+La espada maestra es la mejor que se ha forjado jamás, pero sigue siendo una sola espada. Derribo a muchos guerreros antes de caer bajo el peso de cien.
+
+Lo último que veo es a Sigrid, mirándome desde la entrada de la aldea.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->El ejército del norte]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - La fiebre del norte [PERDER] {"position":"1800,900","size":"100,100"}
+—Lo curaremos como en el norte —decido.
+
+Ponemos a Klas junto al fuego y le damos hidromiel, pero la fiebre sube en vez de bajar. Al tercer día, Klas no despierta, y la fiebre empieza a pasar de un tripulante a otro.
+
+Calipso ya se había ido. Nuestro barco nunca sale de Grecia.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La fiebre]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - La sombra del norte [PERDER] {"position":"2100,900","size":"100,100"}
+Partimos antes del amanecer, solo Thorgrim y yo.
+
+Llegamos al pueblo y encontramos la entrada de la forja, sellada con un mecanismo tan fino como el de la tabla. Lo intento una y otra vez, pero no logro abrirlo.
+
+—¡Apártate! —ruge Thorgrim, y golpea la puerta con su martillo hasta que la montaña entera se derrumba sobre la forja.
+
+Vuelvo al norte con las manos vacías, cada día más parecido a Thorgrim.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La propuesta de Thorgrim]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Perdidos en el bosque [PERDER] {"position":"1500,900","size":"100,100"}
+—Nadie me quita mi espada —le digo, y entro al bosque solo.
+
+En una hora estoy perdido. En dos, caigo en una trampa para lobos. Al anochecer, los aullidos están cada vez más cerca.
+
+En este bosque, mi espada no me sirve de nada.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->El bosque de Gisela]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Perdidos en el mar abierto [PERDER] {"position":"1350,900","size":"100,100"}
+—El sol, por supuesto —respondo.
+
+Seguir al sol parece lógico, hasta que recuerdo que el sol se mueve. Lo perseguimos hacia el oeste día tras día, hasta que se acaban el agua y la comida en medio del océano.
+
+Klas había intentado avisarme.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La aldea de Klas]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Prisioneros [PERDER] {"position":"1950,900","size":"100,100"}
+—Esta noche, por el muro —le digo a Thorgrim.
+
+A medianoche escalamos. Thorgrim es el primero en llegar arriba, y el primero en ver las antorchas: los guardias nos estaban esperando.
+
+Nos encierran en un calabozo bajo la ciudad. Desde una pequeña ventana veo cómo el cielo se vuelve rojo, día tras día, mientras el fin del mundo llega sin mí.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La frontera]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Que vaya otro [PERDER] {"position":"1050,900","size":"100,100"}
+—Que vaya otro —le digo, y le devuelvo la tabla.
+
+Ralf, resignado, envía a otro joven en mi lugar. El barco parte una mañana gris y nunca vuelve.
+
+Meses después, el cielo se tiñe de rojo y el Ragnarök cae sobre el norte. La tabla nunca encontró a quien debía leerla.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La revelación]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Sangre en la nieve [PERDER] {"position":"2850,1050","size":"100,100"}
+Levanto la espada y la dejo caer. Thorgrim cae en la nieve.
+
+Por un instante hay silencio. Luego, las aldeas del norte gritan venganza. La guerra no termina ese día, ni el siguiente, y el cielo sigue rojo.
+
+Gané el duelo, pero condené a mi mundo a la guerra.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->El duelo]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Tragados por el mar [PERDER] {"position":"1200,900","size":"100,100"}
+—¡A los remos! —ordeno, y obligo a todos a seguirme.
+
+Por un momento parece que lo logramos, hasta que una ola gigante parte el mástil en dos. El barco se hunde antes de salir de los mares del norte.
+
+El mar no se vence a golpes.
+
+(text-color:red)[Has perdido]
+
+[[Volver a intentarlo->La primera tormenta]]
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: Perdidos en el fin del mundo [Decision] {"position":"2700,300","size":"100,100"}
+Con la espada maestra, emprendemos el regreso al norte. Pero el Ragnarök ya comenzó: el cielo está rojo, el sol apenas brilla y el mar se ha vuelto loco.
+
+Sin Thorgrim, nadie sabe navegar de vuelta. Después de días sin rumbo, empezamos a perder la esperanza.
+
+—Estamos perdidos —dice Hakan.
+
+—No —respondo—. Yo conozco el norte. Un vikingo siempre sabe dónde está su casa.
+
+Klas, por primera vez en todo el viaje, no hace ningún chiste. Está mirando fijamente el cielo.
+
+[[Navegar por instinto->PERDER - A la deriva en el fin del mundo]]
+[[Preguntarle a Klas qué mira->Las estrellas de Klas]]
+
+
+:: Se anuncia una visión {"position":"750,300","size":"100,100"}
+Un día de tormenta, Ralf el sabio convoca a todo el pueblo. Nunca lo había visto tan serio.
+
+—He tenido una visión —dice, y todos guardan silencio—. Se avecina el Ragnarök. El fin del mundo.
+
+Un murmullo de miedo recorre la sala.
+
+—Pero no todo está perdido —continúa—. Los dioses me mostraron a un elegido, alguien capaz de detenerlo. Tendrá que viajar por tierras y culturas lejanas hasta la Forja de Hefesto, y allí forjar la espada que salvará al mundo.
+
+—¿Y quién es? —grita alguien desde el fondo.
+
+—No lo sé —responde Ralf—. Solo sé que aparecerá cuando llegue el momento.
+
+[[Continuar->La pesadilla]]
+
+
+:: Se izan las velas {"position":"1200,300","size":"100,100"}
+Ralf llama a Thorgrim, el navegante más experimentado de la aldea. Es un hombre callado, de mirada dura, que ha navegado más mares que nadie en el norte.
+
+—Lo acompañarás y lo guiarás —le ordena Ralf.
+
+Thorgrim me mira de arriba abajo y asiente sin decir palabra.
+
+—Su primer destino es una aldea vikinga al otro lado del mar —nos dice Ralf—. Allí los espera el primer acertijo.
+
+Me despido de mi familia en el muelle. Sigrid me abraza tan fuerte que casi no me deja respirar.
+
+—Prométeme que vas a volver.
+
+—Te lo prometo.
+
+El barco zarpa y, por primera vez, veo mi aldea hacerse pequeña en el horizonte.
+
+[[Continuar->La primera tormenta]]
+
+
+:: Sin espada {"position":"1500,450","size":"100,100"}
+Le entrego la espada. Me siento desnudo.
+
+Gisela nos guía por senderos que yo nunca habría visto, esquivando sus propias trampas para lobos. Después de horas llegamos a un roble gigantesco con un mensaje grabado en la corteza. Lo comparo con la tabla: el siguiente destino es una ciudad junto a un mar cálido, más al sur.
+
+Gisela me devuelve la espada.
+
+—Para ser vikingo, no eres tan tonto —me dice—. Voy con ustedes. Quiero ver qué hay más allá de los árboles.
+
+[[Seguir al sur->La mesa de Ottavio]]
+
+
+:: Todos para uno y uno para todos {"position":"2850,450","size":"100,100"}
+Me detengo a pensar y miro a mi alrededor.
+
+Klas, que me enseñó a leer las estrellas. Gisela, que me guió por su bosque. Calipso, que salvó a Klas.(if: $ottavio)[ Ottavio, que me enseñó a pedir perdón.] Hakan, que abrió puertas con palabras. Aisha, que me tendió la mano cuando estaba en el suelo.
+
+No habría llegado tan lejos sin ellos. Ya no creo que los vikingos seamos superiores. Cada cultura es distinta, y eso no la hace peor: cada una destaca en algo, y gracias a eso logré superar esta aventura.
+
+Pero la aventura aún no termina. Queda la última batalla.
+
+—¿Qué hacemos, Asvald? —pregunta Gisela, con el arco listo.
+
+—Lo mismo que hicimos todo el viaje —le respondo—. Juntos.
+
+[[Organizar la defensa con todos->El duelo]]
+
+
+:: Un plato roto [Decision] {"position":"1650,600","size":"100,100"}
+—Esto es comida para cabras —digo, apartando el plato.
+
+Ottavio se pone rojo. Deja caer el plato que tenía en la mano, que se rompe en mil pedazos, y nos grita algo en su idioma que no necesita traducción. En segundos estamos en la calle.
+
+—Bien hecho, Asvald —dice Klas, muerto de vergüenza—. Por suerte escuché en el puerto algo sobre una vieja prensa de aceite romana.
+
+La encontramos, y su inscripción revela el siguiente destino: unas ruinas en Grecia.
+
+—No necesitamos a un simple cocinero —dice Thorgrim—. Sigamos.
+
+[[Volver a pedirle disculpas->La disculpa]]
+[[Seguir sin Ottavio->La fiebre]]
+
+
+:: Una vida vikinga {"position":"600,300","size":"100,100"}
+(set: $ottavio to false)
+Me llamo Asvald. Vivo en una aldea vikinga, en alguna parte al norte del mundo, una vida tranquila, o tan tranquila como puede ser la vida de un vikingo. Soy herrero, como mi padre, y fue él quien me enseñó a domar el fuego y el hierro.
+
+Vivo con mi familia: mi padre, mi madre y mi hermana menor, Sigrid, que pasa más tiempo en mi herrería que en la casa.
+
+—Algún día voy a forjar una espada mejor que las tuyas —me dice cada mañana.
+
+—Algún día —le respondo, sin dejar de martillar.
+
+[[Continuar->Los vikingos]]
+
+
+:: Variables [startup] {"position":"400,150","size":"100,100"}
+(set: $ottavio to false)
