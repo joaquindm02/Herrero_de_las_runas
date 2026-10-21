@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Herrero de las Runas y las Arenas</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --panel: #1f1a17;
+      --text: #e8dcc8;
+      --muted: #a8998a;
+      --accent: #e0803a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: radial-gradient(circle at 50% 30%, #2a1f18, var(--bg) 70%);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+    .runes {
+      color: var(--accent);
+      letter-spacing: 0.5em;
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.15;
+      margin: 0.4em 0;
+    }
+    blockquote {
+      background: var(--panel);
+      border-left: 3px solid var(--accent);
+      margin: 2em 0;
+      padding: 1em 1.4em;
+      text-align: left;
+      font-style: italic;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 2em 0;
+    }
+    a.btn, button.btn {
+      font: inherit;
+      padding: 0.7em 1.4em;
+      border-radius: 6px;
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .primary { background: var(--accent); color: var(--bg); }
+    .secondary { background: transparent; color: var(--accent); }
+    footer { color: var(--muted); font-size: 0.9rem; margin-top: 3em; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="runes">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+    <h1>El Herrero de las Runas y las Arenas</h1>
+    <p>Una aventura interactiva sobre fuego, hierro y destino.</p>
+
+    <blockquote>
+      Me llamo Asvald. Vivo en una aldea vikinga, en alguna parte al norte del mundo.
+      Soy herrero, como mi padre, y fue él quien me enseñó a domar el fuego y el hierro.
+    </blockquote>
+
+    <div class="actions">
+      <a class="btn primary" href="El_Herrero_de_las_Runas_y_las_Arenas.twee" download>Descargar historia (.twee)</a>
+      <button class="btn secondary" id="music">♪ Música</button>
+    </div>
+
+    <footer>Proyecto del ramo “Creación de videojuegos” · Hecho con Twine (Harlowe)</footer>
+  </main>
+
+  <audio id="bgm" src="sonidos/music.mp3" loop></audio>
+  <script>
+    const bgm = document.getElementById('bgm');
+    const btn = document.getElementById('music');
+    btn.addEventListener('click', () => {
+      if (bgm.paused) { bgm.play(); btn.textContent = '❚❚ Pausar'; }
+      else { bgm.pause(); btn.textContent = '♪ Música'; }
+    });
+  </script>
+</body>
+</html>
