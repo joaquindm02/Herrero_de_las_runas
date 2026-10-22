@@ -1,0 +1,259 @@
+:: Portada {"position":"200,150","size":"100,100"}
+{
+<div class="portada">
+(print: '<img class="portada-img" src="' + $rutaSprites + 'portada.png" alt="Asvald frente a la forja, mirando el camino del norte a Bagdad">')
+<div class="portada-titulo">
+<div class="runas">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+<h1>El Herrero de las Runas y las Arenas</h1>
+<p class="subtitulo">Una aventura interactiva sobre fuego, hierro y destino</p>
+</div>
+</div>
+<div class="portada-botones">
+[[Jugar->Una vida vikinga]]
+[[Instrucciones]]
+</div>
+<p class="creditos">Diego Herrera A · Joaquín Domínguez · César Balladares<br>Tarea 2 · Creación de Videojuegos</p>
+}
+
+
+:: Instrucciones {"position":"200,300","size":"100,100"}
+{
+<div class="instrucciones">
+(print: '<img class="sprite retrato-grande" src="' + $rutaSprites + 'asvald.png" alt="Asvald">')
+<h2>Cómo jugar</h2>
+<p>Eres <b>Asvald</b>, herrero de una aldea vikinga del norte. Los sueños anuncian el fin del mundo, y quizás seas tú quien deba detenerlo.</p>
+<ul>
+<li><b>Lee y elige.</b> Haz clic en las opciones al final de cada escena para decidir qué hace Asvald.</li>
+<li><b>El sonido de espada</b> marca una decisión importante. «Continuar» solo avanza la historia.</li>
+<li><b>Puedes perder.</b> Hay 13 finales de derrota y uno solo de victoria. Si pierdes, puedes reintentar desde la última decisión o volver al inicio.</li>
+<li><b>Inventario.</b> Con el botón 🎒 abajo a la derecha ves los objetos y compañeros que reúnes en el viaje. Algunos podrían servirte más adelante.</li>
+<li><b>Sube el volumen.</b> El juego tiene música y sonidos.</li>
+</ul>
+<p class="consejo">Un consejo del sabio Ralf: el mundo es más grande que nuestra aldea.</p>
+</div>
+<div class="portada-botones">
+[[Jugar->Una vida vikinga]]
+[[Volver a la portada->Portada]]
+</div>
+}
+
+
+:: Inventario [header] {"position":"200,450","size":"100,100"}
+{
+(set: _p to (passage:)'s name)
+(unless: _p is "Portada" or _p is "Instrucciones")[
+(if: _p is "Una vida vikinga")[(set: $inv to (a:), $aliados to (a:), $instantaneas to (dm:))]
+<!-- Al reintentar desde una escena ya visitada, se recupera el inventario que tenías la primera vez -->
+(if: $instantaneas contains _p)[
+(set: $inv to $instantaneas's (_p)'s inv, $aliados to $instantaneas's (_p)'s aliados)
+](else:)[
+(set: $instantaneas's (_p) to (dm: "inv", $inv, "aliados", $aliados))
+]
+(set: $nuevos to (a:), $perdidos to (a:), $seUnen to (a:), $seVan to (a:))
+(if: $eventos contains _p)[
+(set: $ev to (dm: "dar", (a:), "quitar", (a:), "unir", (a:), "dejar", (a:)) + $eventos's (_p))
+(for: each _id, ...$ev's quitar)[(if: $inv contains _id)[(set: $inv to it - (a: _id), $perdidos to it + (a: _id))]]
+(for: each _id, ...$ev's dar)[(unless: $inv contains _id)[(set: $inv to it + (a: _id), $nuevos to it + (a: _id))]]
+(for: each _id, ...$ev's dejar)[(if: $aliados contains _id)[(set: $aliados to it - (a: _id), $seVan to it + (a: _id))]]
+(for: each _id, ...$ev's unir)[(unless: $aliados contains _id)[(set: $aliados to it + (a: _id), $seUnen to it + (a: _id))]]
+]
+<div class="avisos">
+(for: each _id, ...$nuevos)[(print: '<div class="aviso"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><span>Obtienes: <b>' + $objetos's (_id)'s nombre + '</b></span></div>')]
+(for: each _id, ...$perdidos)[(print: '<div class="aviso aviso-malo"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><span>Pierdes: <b>' + $objetos's (_id)'s nombre + '</b></span></div>')]
+(for: each _id, ...$seUnen)[(print: '<div class="aviso"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><span><b>' + $personajes's (_id)'s nombre + '</b> se une al viaje</span></div>')]
+(for: each _id, ...$seVan)[(print: '<div class="aviso aviso-malo"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><span><b>' + $personajes's (_id)'s nombre + '</b> ya no está de tu lado</span></div>')]
+</div>
+(if: $retratos contains _p)[(set: $r to $retratos's (_p))(print: '<figure class="retrato"><img class="sprite" src="' + $rutaSprites + $r + '.png" alt=""><figcaption>' + $personajes's ($r)'s nombre + '</figcaption></figure>')]
+<details class="inventario">
+<summary>🎒 Inventario ((print: $inv's length + $aliados's length))</summary>
+<div class="inventario-panel">
+<h3>Objetos</h3>
+(if: $inv's length is 0)[<p class="vacio">No llevas nada.</p>](else:)[<div class="grilla">(for: each _id, ...$inv)[(print: '<div class="ficha"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><div><b>' + $objetos's (_id)'s nombre + '</b><small>' + $objetos's (_id)'s desc + '</small></div></div>')]</div>]
+<h3>Compañeros</h3>
+(if: $aliados's length is 0)[<p class="vacio">Viajas solo... por ahora.</p>](else:)[<div class="grilla">(for: each _id, ...$aliados)[(print: '<div class="ficha"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><div><b>' + $personajes's (_id)'s nombre + '</b><small>' + $personajes's (_id)'s desc + '</small></div></div>')]</div>]
+</div>
+</details>
+]
+}
+
+
+:: Inventario inicial [startup] {"position":"200,600","size":"100,100"}
+{
+<!-- Carpeta de las imágenes (GitHub Pages), igual que BASE_SONIDOS en el StoryScript -->
+(set: $rutaSprites to "https://joaquindm02.github.io/Herrero_de_las_runas/sprites/")
+(set: $inv to (a:), $aliados to (a:), $instantaneas to (dm:))
+
+(set: $objetos to (dm:
+"espada", (dm: "nombre", "Espada de Asvald", "desc", "Forjada por tus manos, a la manera vikinga. Nunca se la has entregado a nadie."),
+"tabla", (dm: "nombre", "Tabla de acertijos", "desc", "Un metal que nadie conoce, cubierto de runas. Cada acertijo resuelto revela el siguiente destino."),
+"estrellas", (dm: "nombre", "Carta de estrellas", "desc", "Regalo de Klas. La estrella polar nunca se mueve."),
+"receta", (dm: "nombre", "Receta de Ottavio", "desc", "Aceite para cocinar, para curar... ¿y para el acero?"),
+"hierbas", (dm: "nombre", "Hierbas de Calipso", "desc", "Lo que no cura el fuego del norte, lo cura la paciencia."),
+"salvoconducto", (dm: "nombre", "Salvoconducto de Hakan", "desc", "Las palabras abren más puertas que las espadas."),
+"panuelo", (dm: "nombre", "Pañuelo de Aisha", "desc", "Seda de Bagdad. Huele a especias y a desierto."),
+"espada_rota", (dm: "nombre", "Espada rota", "desc", "Partida por el martillo de Thorgrim. Solo no pudiste."),
+"espada_maestra", (dm: "nombre", "Espada maestra", "desc", "Acero del norte, ondas del sur y el saber de todos los pueblos.")
+))
+
+(set: $personajes to (dm:
+"asvald", (dm: "nombre", "Asvald", "desc", "Herrero y guerrero vikingo."),
+"ralf", (dm: "nombre", "Ralf, el sabio", "desc", "El anciano que tuvo la visión."),
+"thorgrim", (dm: "nombre", "Thorgrim", "desc", "El navegante más experimentado del norte. Callado y de mirada dura."),
+"klas", (dm: "nombre", "Klas", "desc", "Vikingo chistoso que no para de hablar. Sabe leer las estrellas."),
+"gisela", (dm: "nombre", "Gisela", "desc", "Cazadora germana. Conoce cada sendero de su bosque."),
+"ottavio", (dm: "nombre", "Ottavio", "desc", "Cocinero italiano. Todo lo resuelve con aceite."),
+"calipso", (dm: "nombre", "Calipso", "desc", "Herborista griega. Tímida, pero sabe curar."),
+"hakan", (dm: "nombre", "Hakan", "desc", "Clérigo turco. Habla más idiomas de los que puedes contar."),
+"aisha", (dm: "nombre", "Aisha", "desc", "Bailarina de Bagdad, la de los dedos de seda.")
+))
+
+<!-- Qué se gana o se pierde al entrar a cada escena (por nombre de pasaje) -->
+(set: $eventos to (dm:
+"Una vida vikinga", (dm: "dar", (a: "espada")),
+"Se izan las velas", (dm: "dar", (a: "tabla"), "unir", (a: "thorgrim")),
+"Klas y las estrellas", (dm: "dar", (a: "estrellas"), "unir", (a: "klas")),
+"Sin espada", (dm: "unir", (a: "gisela")),
+"Ottavio se une", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
+"La disculpa", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
+"Las hierbas de Calipso", (dm: "dar", (a: "hierbas"), "unir", (a: "calipso")),
+"Las palabras de Hakan", (dm: "dar", (a: "salvoconducto"), "unir", (a: "hakan")),
+"El último acertijo", (dm: "dar", (a: "panuelo"), "unir", (a: "aisha")),
+"La pérdida de un aliado", (dm: "dejar", (a: "thorgrim")),
+"La forja", (dm: "quitar", (a: "espada"), "dar", (a: "espada_rota")),
+"Entre las cenizas", (dm: "quitar", (a: "tabla")),
+"Perdidos en el fin del mundo", (dm: "quitar", (a: "espada_rota"), "dar", (a: "espada_maestra"))
+))
+
+<!-- Retrato que se muestra arriba de cada escena -->
+(set: $retratos to (dm:
+"Una vida vikinga", "asvald",
+"Se anuncia una visión", "ralf",
+"En busca de la verdad", "ralf",
+"La revelación", "ralf",
+"Se izan las velas", "thorgrim",
+"La primera tormenta", "thorgrim",
+"La aldea de Klas", "klas",
+"Klas y las estrellas", "klas",
+"El bosque de Gisela", "gisela",
+"La mesa de Ottavio", "ottavio",
+"La disculpa", "ottavio",
+"La fiebre", "calipso",
+"La frontera", "hakan",
+"El último acertijo", "aisha",
+"El pasado de Thorgrim", "thorgrim",
+"La propuesta de Thorgrim", "thorgrim",
+"El reencuentro", "thorgrim",
+"Las estrellas de Klas", "klas",
+"El duelo", "thorgrim"
+))
+}
+
+
+:: Estilo portada e inventario [stylesheet] {"position":"200,750","size":"100,100"}
+:root {
+  --bg: #14110f;
+  --panel: #1f1a17;
+  --text: #e8dcc8;
+  --muted: #a8998a;
+  --accent: #e0803a;
+  --malo: #c0503a;
+}
+html, body { background-color: var(--bg); }
+tw-story {
+  background: radial-gradient(circle at 50% 20%, #2a1f18, var(--bg) 70%) fixed var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+tw-passage { padding-bottom: 5em; }
+tw-link, .enchantment-link { color: var(--accent); }
+tw-link.visited { color: #c46a30; }
+tw-link:hover, .enchantment-link:hover { color: #ffb070; }
+img.sprite, .portada-img { image-rendering: pixelated; }
+
+/* ---------- Portada ---------- */
+.portada { position: relative; border: 2px solid #3a2c22; }
+.portada-img { display: block; width: 100%; height: auto; }
+.portada-titulo {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: 4% 4% 10%;
+  text-align: center;
+  background: linear-gradient(rgba(20,17,15,0.85), transparent);
+}
+.portada-titulo h1 {
+  margin: 0.2em 0;
+  font-size: clamp(1.4rem, 4.5vw, 2.6rem);
+  line-height: 1.15;
+  text-shadow: 0 2px 6px #000;
+}
+.runas { color: var(--accent); letter-spacing: 0.5em; opacity: 0.85; }
+.subtitulo { margin: 0; font-style: italic; text-shadow: 0 1px 4px #000; }
+.portada-botones {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+  margin: 1.5em 0;
+}
+.portada-botones tw-link {
+  padding: 0.6em 1.4em;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+}
+.portada-botones tw-link:hover { background: var(--accent); color: var(--bg); }
+.creditos { text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Instrucciones ---------- */
+.instrucciones li { margin-bottom: 0.6em; }
+.retrato-grande { float: right; width: 144px; margin: 0 0 1em 1em; border: 2px solid #3a2c22; }
+.consejo { font-style: italic; color: var(--muted); clear: both; }
+
+/* ---------- Retrato de escena ---------- */
+.retrato { float: right; margin: 0 0 1em 1.2em; text-align: center; }
+.retrato img { width: 144px; height: 144px; border: 2px solid #3a2c22; display: block; }
+.retrato figcaption { color: var(--accent); font-size: 0.9rem; margin-top: 0.3em; }
+@media (max-width: 540px) {
+  .retrato, .retrato-grande { float: none; margin: 0 auto 1em; width: fit-content; }
+  .retrato-grande { display: block; }
+}
+
+/* ---------- Avisos ---------- */
+.avisos {
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+  z-index: 60; display: flex; flex-direction: column; gap: 8px;
+  pointer-events: none; width: max-content; max-width: calc(100vw - 32px);
+}
+.aviso {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--panel); border: 1px solid var(--accent); border-radius: 6px;
+  padding: 6px 14px 6px 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  animation: aviso 4s ease forwards;
+}
+.aviso img { width: 48px; height: 48px; }
+.aviso-malo { border-color: var(--malo); }
+@keyframes aviso {
+  0% { opacity: 0; transform: translateY(-12px); }
+  10%, 80% { opacity: 1; transform: none; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Inventario ---------- */
+.inventario { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
+.inventario summary {
+  list-style: none; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--accent); border-radius: 6px;
+  padding: 0.5em 1em; color: var(--accent);
+}
+.inventario summary::-webkit-details-marker { display: none; }
+.inventario-panel {
+  position: absolute; right: 0; bottom: calc(100% + 8px);
+  width: min(420px, calc(100vw - 32px)); max-height: 70vh; overflow-y: auto;
+  background: var(--panel); border: 1px solid #3a2c22; border-radius: 6px;
+  padding: 0.5em 1em 1em;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  font-size: 1rem; line-height: 1.35;
+}
+.inventario-panel h3 { color: var(--accent); margin: 0.8em 0 0.4em; font-size: 1.05rem; }
+.grilla { display: flex; flex-direction: column; gap: 10px; }
+.ficha { display: flex; gap: 10px; align-items: center; }
+.ficha img { width: 64px; height: 64px; flex: none; border: 1px solid #3a2c22; background: var(--bg); }
+.ficha b { display: block; }
+.ficha small { display: block; color: var(--muted); font-size: 0.85rem; }
+.vacio { color: var(--muted); font-style: italic; margin: 0; }
