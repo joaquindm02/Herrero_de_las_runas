@@ -25,7 +25,7 @@
 <ul>
 <li><b>Lee y elige.</b> Haz clic en las opciones al final de cada escena para decidir qué hace Asvald.</li>
 <li><b>El sonido de espada</b> marca una decisión importante. «Continuar» solo avanza la historia.</li>
-<li><b>Puedes perder.</b> Hay 13 finales de derrota y uno solo de victoria. Si pierdes, puedes reintentar desde la última decisión o volver al inicio.</li>
+<li><b>Puedes perder.</b> Hay muchas formas de perder y una sola de ganar. Si pierdes, puedes reintentar desde la última decisión o volver al inicio.</li>
 <li><b>Inventario.</b> Con el botón 🎒 abajo a la derecha ves los objetos y compañeros que reúnes en el viaje. Algunos podrían servirte más adelante.</li>
 <li><b>Sube el volumen.</b> El juego tiene música y sonidos.</li>
 </ul>
@@ -111,13 +111,14 @@
 (set: $eventos to (dm:
 "Una vida vikinga", (dm: "dar", (a: "espada")),
 "Se izan las velas", (dm: "dar", (a: "tabla"), "unir", (a: "thorgrim")),
-"Klas y las estrellas", (dm: "dar", (a: "estrellas"), "unir", (a: "klas")),
+"Un nuevo aliado vikingo", (dm: "dar", (a: "estrellas"), "unir", (a: "klas")),
 "Sin espada", (dm: "unir", (a: "gisela")),
 "Ottavio se une", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
 "La disculpa", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
 "Las hierbas de Calipso", (dm: "dar", (a: "hierbas"), "unir", (a: "calipso")),
 "Las palabras de Hakan", (dm: "dar", (a: "salvoconducto"), "unir", (a: "hakan")),
 "El último acertijo", (dm: "dar", (a: "panuelo"), "unir", (a: "aisha")),
+"La fiebre no se cura", (dm: "dejar", (a: "klas")),
 "La pérdida de un aliado", (dm: "dejar", (a: "thorgrim")),
 "La forja", (dm: "quitar", (a: "espada"), "dar", (a: "espada_rota")),
 "Entre las cenizas", (dm: "quitar", (a: "tabla")),
@@ -133,12 +134,16 @@
 "Se izan las velas", "thorgrim",
 "La primera tormenta", "thorgrim",
 "La aldea de Klas", "klas",
+"Aceptar la ayuda de Klas", "klas",
 "Klas y las estrellas", "klas",
+"Un nuevo aliado vikingo", "klas",
 "El bosque de Gisela", "gisela",
 "La mesa de Ottavio", "ottavio",
 "La disculpa", "ottavio",
 "La fiebre", "calipso",
+"Calipso", "calipso",
 "La frontera", "hakan",
+"La bailarina de Bagdad", "aisha",
 "El último acertijo", "aisha",
 "El pasado de Thorgrim", "thorgrim",
 "La propuesta de Thorgrim", "thorgrim",

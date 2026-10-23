@@ -1,0 +1,1569 @@
+:: StoryTitle
+El Herrero de las Runas y las Arenas
+
+
+:: StoryData
+{
+  "ifid": "0276EF2B-0D31-4FE2-BD93-837D423D7ABB",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Portada",
+  "tag-colors": {
+    "PERDER": "red",
+    "GANAR": "green",
+    "Decision": "yellow",
+    "Fase": "blue"
+  },
+  "zoom": 0.6
+}
+
+
+:: 1. MUNDO ORDINARIO [Fase] {"position":"450,150","size":"100,100"}
+Fase 1
+
+
+:: 10. CAMINO DE REGRESO [Fase] {"position":"3950,150","size":"100,100"}
+Fase 10
+
+
+:: 11. RESURRECCIÓN [Fase] {"position":"4350,150","size":"100,100"}
+Fase 11
+
+
+:: 12. REGRESO CON EL ELIXIR [Fase] {"position":"4750,150","size":"100,100"}
+Fase 12
+
+
+:: 2. LLAMADA A LA AVENTURA [Fase] {"position":"750,150","size":"100,100"}
+Fase 2
+
+
+:: 3. RECHAZO DE LA LLAMADA [Fase] {"position":"1150,150","size":"100,100"}
+Fase 3
+
+
+:: 4. ENCUENTRO CON EL MENTOR [Fase] {"position":"1550,150","size":"100,100"}
+Fase 4
+
+
+:: 5. CRUCE DEL UMBRAL [Fase] {"position":"1950,150","size":"100,100"}
+Fase 5
+
+
+:: 6. PRUEBAS, ALIADOS Y ENEMIGOS [Fase] {"position":"2350,150","size":"100,100"}
+Fase 6
+
+
+:: 7. ACERCAMIENTO [Fase] {"position":"2750,150","size":"100,100"}
+Fase 7
+
+
+:: 8. LA GRAN PRUEBA [Fase] {"position":"3150,150","size":"100,100"}
+Fase 8
+
+
+:: 9. RECOMPENSA [Fase] {"position":"3550,150","size":"100,100"}
+Fase 9
+
+
+:: Aceptar la ayuda de Klas {"position":"2275,600","size":"100,100"}
+—Está bien. —dije resignado mientras suspiraba—. Este es el acertijo.
+
+Le leí en voz alta el primer acertijo de la tabla:
+
+"Todos giran a mi alrededor, pero yo nunca me muevo. Dame la espalda y encontrarás el camino."
+
+Klas quedó pensativo un segundo, y luego dijo.
+
+—Todas las estrellas giran durante la noche, menos una: la estrella polar. Siempre marca el norte. Si le das la espalda, vas hacia el sur.
+
+—La estrella polar —dije en voz alta.
+
+Las runas de la tabla brillaron y apareció un nuevo símbolo: un árbol.
+
+—Wow —dijo Klas, emocionado—. ¿Qué significa eso?
+
+—Parece que el próximo destino serán las tierras germanas —dijo Thorgrim, asustando a los demás que parecían haber olvidado su presencia.
+
+[[Continuar->Klas y las estrellas]]
+
+
+:: Adios Klas {"position":"2425,900","size":"100,100"}
+—Lo lamento Klas —dije—. Pero no tengo espacio para alguien como tú en este viaje.
+
+—Oh... Okay, entiendo —dijo Klas, claramente apenado—. Espero que les vaya bien en su viaje.
+
+—Gracias. Toma —dije, mientras le extendí 5 runas de cobre—. Por tu ayuda con el acertijo.
+
+—No hay de qué —respondió—. Adiós.
+
+Klas se despidió y volvió a su pueblo, mientras yo me fui de vuelta al barco para continuar con la aventura.
+
+[[Continuar->El bosque de Gisela]]
+
+
+:: Calipso [Decision] {"position":"2275,1900","size":"100,100"}
+(if: $herida_de_lobo)[En el viaje hacia Grecia, una herida causada por los lobos aún no sanaba del todo.](else:)[En el viaje hacia Grecia, me hice una herida con el mastil que me molestó durante todo el viaje.]
+
+Al llegar a las ruinas de un templo encontramos a una joven recogiendo plantas entre las columnas. Se llama Calipso y es herborista.
+
+Me acerqué resignado para pedirle ayuda.
+
+—Hola, estamos buscando una pista sobre la Forja de Hefesto. ¿Sabes algo al respecto?
+
+—Sí, de hecho hay una inscripción muy parecida a sus runas vikingas.
+
+—Veo que estás herido —dijo Calipso, apuntando a su brazo—. Puedo ayudar tratar tu herida si me lo permites.
+
+—Es un simple rasmillón, vivirás —me dijo Thorgrim, algo impaciente.
+
+[[Aceptar la ayuda de Calipso->Las hierbas de Calipso]] 
+[[Rechazar su ayuda->Nos despedimos de Calipso]]
+
+
+:: Con espada {"position":"2425,1250","size":"100,100"}
+—Continuaremos con nuestras espadas —dije, decidido.
+
+Al oir esto, Thorgrim me asintió con la cabeza, pero no dijo nada. Gisela nos miró con decepción y nos abandonó.
+
+—Bueno, ahora hay que encontrar el roble del que habló Gisela —dije.
+
+Nos tomó todo el día dar con el roble más viejo del bosque que contenía la siguiente pista. Tuvimos que pelear con una manada de lobos hambrientos que logramos derrotar, pero no sin haber recibido un par de mordiscos y arañazos a cambio.
+
+—Lo importante es que lo logramos, muchacho —dijo Thorgrim, convencido de que fue la mejor decisión.
+
+Comparé las inscripciones del árbol con la tabla y señalaban el siguiente destino: una ciudad junto a un mar cálido, más al sur.
+
+(set: $herida_de_lobo to true)
+[[Seguir al sur->La mesa de Ottavio]]
+
+
+:: Conflicto interno [Decision] {"position":"1150,450","size":"100,100"}
+No se lo habia contado a nadie, pero estaba empezando a sospechar que el sueño era una señal. Quizás yo era el elegido que estabamos esperando.
+
+La idea no me gustó para nada. Ser el elegido significaría dejar la aldea y viajar por tierras extranjeras.
+
+—No soy yo —me repetí a mi mismo—. Es solo un mal sueño. Ya pasará.
+
+Pero la pesadilla se volvía cada vez más fuerte, hasta que una noche soñé con mi propia aldea en llamas.
+
+—¡Tengo que hacer algo! —dije para adentro, frustrado—. Pero ¡¿Qué?!
+
+[[Contarle a Ralf->En busca de la verdad]]
+[[Callar y defender la aldea->Martillo y negación]]
+
+
+:: Después de la reunión {"position":"750,450","size":"100,100"}
+Al volver a casa con mis padres, ninguno dijo nada durante la cena. La mayoría del pueblo salió exaltada de la reunión, maldiciendo a los dioses y preparándose para lo que se avecinaba inminentemente, pero nosotros salimos en silencio, sopesando lo anunciado.
+
+—Si el fin del mundo se acerca, ¿estaremos a salvo mientras aparezca ese elegido? —preguntó mi madre.
+
+Mi padre no respondió. Ninguno sabía qué decir.
+
+[[Ir a la cama a dormir->La pesadilla]]
+
+
+:: El bosque de Gisela [Decision] {"position":"2350,1100","size":"100,100"}
+El símbolo del árbol nos llevó a las tierras de los germanos, a un bosque tan espeso que, aunque era de día, parecia de noche. Al entrar, nos estaba esperando una mujer con un arco más alto que ella.
+
+—Me llamo Gisela —dijo, seria—. Sé lo que buscan. Lo pueden encontrar en el roble más viejo de este bosque. Puedo guiarlos hasta allá.
+
+—Perfecto —le dije—. Vamos.
+
+—Pero en mi bosque ningún extranjero camina armado. Tu espada, vikingo, tendrás que dejarla aquí.
+
+Thorgrim escupió al suelo.
+
+—Ni lo pienses, muchacho. No confío en ella.
+
+Miré mi espada y pensé qué hacer. Entiendo a Thorgrim, pero no nos sobra el tiempo.
+
+<script>sonarLoop("forest.mp3");</script>
+<script>parar("music_cut.mp3");</script>
+
+[[Entregar la espada->Sin espada]]
+[[Entrar solos al bosque->Con espada]]
+
+
+:: El duelo [Decision] {"position":"4350,600","size":"100,100"}
+(if: $gisela)[Gisela toma altura y cubre la entrada con su arco.]
+(if: $aisha)[Aisha ayuda a llevar a las familias hacia un lugar seguro.]
+(if: $calipso)[Calipso prepara hierbas y vendas para los heridos.]
+(if: $ottavio)[Ottavio organiza provisiones y ofrece su aceite para atender a quienes lo necesitan.]
+(if: $hakan)[Hakan intenta convencer a los guerreros de que bajen las armas.]
+(if: $klas)[Klas observa el cielo y orienta a quienes se mueven entre el humo.]
+
+Gracias a quienes aceptaron acompañarme, la defensa resiste y el primer ataque se detiene.
+
+Entonces Thorgrim avanza solo hasta el centro del campo.
+
+—¡Asvald! —grita—. ¡Un duelo, frente a todos! ¡Que el norte vea quién tiene la razón!
+
+Acepto. Esta vez no dependo solo de mi fuerza: aprovecho la paciencia, la calma y la disciplina que aprendí durante el viaje. Su martillo choca contra la espada maestra, y es el martillo el que se quiebra. Thorgrim cae de rodillas, desarmado.
+
+Todo el norte está mirando. La decisión que tome ahora también marcará el final de mi viaje.
+
+[[Matar a Thorgrim->Matar a Thorgrim]]
+[[Perdonarle la vida->La verdad]]
+
+:: El ejército del norte [Decision] {"position":"4350,300","size":"100,100"}
+Mi aldea está rodeada. Thorgrim llegó antes que nosotros y convocó a las aldeas vikingas del extremo norte, las más cerradas y violentas.
+
+—¡Ahí está el traidor! —grita Thorgrim al vernos—. ¡El que trajo a los extranjeros a nuestras tierras!
+
+Cientos de guerreros esperan frente a la entrada de la aldea. Detrás, mi familia y mi pueblo resisten como pueden.
+
+(if: $espada_curva)[Mi padre aparece junto a mi madre y Sigrid. Lleva en las manos la espada curva que le compró al mercader de Bagdad. Un guerrero descarga un golpe contra él, pero el acero extranjero resiste y desvía el filo. Mi padre logra proteger a mi familia y retrocede hasta un lugar seguro. Al verlo vivo, siento que aquella espada que desprecié acaba de salvarle la vida.](else:)[Mi padre se planta delante de mi madre y Sigrid con su espada vikinga. Lucha para darles tiempo de ponerse a salvo, pero su hoja no soporta el choque contra las armas enemigas y se quiebra. Mi padre sigue protegiendo a mi familia con su propio cuerpo hasta que cae en combate. Quiero correr hacia él, pero los guerreros me cierran el paso.]
+
+Empuño la espada maestra y siento su poder recorrerme el brazo. Por un momento, creo que podría con todos ellos, pero recuerdo que una sola espada no basta para proteger una aldea entera.
+
+<script>parar("waves.mp3");</script>
+<script>parar("cricket.mp3");</script>
+<script>sonarLoop("sword_fight.mp3");</script>
+
+[[Atacar solo con la espada maestra->PERDER - El último vikingo]]
+[[Detenerme a pensar y organizar la defensa->Todos para uno y uno para todos]]
+
+:: El fin [GANAR] {"position":"4750,300","size":"100,100"}
+Vuelvo a mi herrería con los seis compañeros que hicieron posible la victoria: Klas, Gisela, Ottavio, Calipso, Hakan y Aisha. Ninguno de ellos cayó en la batalla. Cada cual aportó algo que yo jamás habría conseguido por mi cuenta, y mi aldea los recibe como amigos.
+
+Abro las puertas de mi taller y enseño lo que aprendí de cada uno de ellos. Algunos se quedan en el norte; otros vuelven a sus tierras, pero prometemos mantener el contacto y visitarnos. Desde entonces, llegan barcos de comercio cada verano y mi aldea deja de temer a quienes vienen de lejos.
+
+Aisha se queda conmigo. Con el tiempo formamos una familia en la aldea donde crecí, y nuestra casa se llena de risas, historias de viaje y aprendices que quieren aprender a trabajar el metal.
+
+Partí como un guerrero terco y volví como un maestro. El Ragnarök quedó atrás, y los seis pueblos aprendieron a vivir en paz.
+
+(if: $thorgrim_muerto)[Aunque mis amigos y mi familia sobrevivieron, la muerte de Thorgrim nunca dejó de pesarme. Hasta el fin de mis días me pregunté si, en aquel momento, había tomado la decisión correcta.]
+
+(text-color:green)[EL FIN: TODOS UNIDOS]
+
+[[Jugar de nuevo->Una vida vikinga]]
+
+:: El pasado de Thorgrim {"position":"2750,600","size":"100,100"}
+Una noche en el desierto, junto al fuego, Thorgrim me habló por primera vez de sí mismo.
+
+—Cuando era niño, me capturaron en un saqueo —dijo, mirando las llamas—. Me vendieron como esclavo en estas tierras. Pasé por las manos de muchos amos, de culturas y creencias distintas. Todos iguales. Hasta que un día escapé y logré volver al norte.
+
+—¿Dónde ocurrió esto? —le pregunté.
+
+No obtuve respuesta.
+
+—Por eso desprecio a los extranjeros, muchacho. A ti tampoco te agradaban. ¿Qué te pasó?
+
+No supe qué responder. Unos meses atras habría pensado exactamente igual que él.
+
+<script>parar("tavern.mp3");</script>
+<script>sonarLoop("music_cut.mp3");</script>
+
+[[Continuar->La propuesta de Thorgrim]]
+
+
+:: El pueblo del pasado {"position":"3150,300","size":"100,100"}
+—No, Thorgrim —le digo—. Ellos vienen conmigo.
+
+Thorgrim me mira largo rato. Luego vuelve a acostarse sin decir nada.
+
+Días después llegamos al pueblo de Aisha, escondido entre dunas y rocas. Nos recibe su abuelo, un anciano de barba blanca.
+
+—He cuidado la entrada de la forja toda mi vida —nos dice—. Síganme.
+
+Nos guía por un pasadizo hacia el corazón de la montaña. Thorgrim camina en silencio detrás de todos. Desde que entramos al pueblo, está pálido.
+
+[[Seguir al anciano->El reencuentro]]
+
+
+:: El quiebre de la espada curva {"position":"525,750","size":"100,100"}
+(set: $espada_curva to false)
+    
+Agarré con fuerza mi martillo y de un solo golpe quebré la admirada espada curva que había comprado su padre.
+    
+—¡¿Pero qué barbaridades haces!? —dijo mi padre, anonadado— Me costó 10 runas de cobre y una espada nueva.
+    
+—Tranquilo padre, te he hecho un favor. Esa espada no habría durado en las manos de un vikingo. Quien la usara habría estado condenado a morir por el solo hecho de empuñarla.
+    
+ —Te pareces cada vez más a ese Thorgrim... —dijo soltando un suspiro.
+    
+    [[Cambiar de tema->La reunión del pueblo]]
+
+
+:: El reencuentro {"position":"3150,450","size":"100,100"}
+Frente a la forja, a la luz de las antorchas, el abuelo de Aisha mira por primera vez a Thorgrim a la cara. Los dos se quedan inmóviles.
+
+—Tú... —susurra Thorgrim.
+
+El anciano palidece.
+
+—No puede ser...
+
+Thorgrim lo ha reconocido. Es el hombre que lo compró cuando era niño. El hombre que lo hizo esclavo.
+
+Veo cómo su mano baja lentamente hacia el martillo.
+
+[[Continuar->La pérdida de un aliado]]
+
+
+:: El sueño {"position":"1150,300","size":"100,100"}
+Pasaron los días y seguí teniendo la misma pesadilla. En ella, veía ciudades que nunca había visitado, pueblos con prendas y templos extraños, y todos caen uno tras otro bajo un cielo rojo.
+
+Cada noche me despertaba empapado en sudor preguntándome:
+¿Por qué sigo soñando lo mismo? ¿Por qué yo?
+
+[[Continuar->Conflicto interno]]
+
+
+:: El temple {"position":"3550,600","size":"100,100"}
+Respiro hondo y golpeo el metal al ritmo que me enseñó mi padre, pero siguiendo los consejos de cada uno de mis amigos. Por primera vez en mi vida, no forjo solo.
+
+Falta el último paso: enfriar la hoja para templarla.
+(if: $ottavio is true)[
+—¡Esperen! —grita Ottavio, destapando una de sus ánforas—. ¡Les dije que el aceite servía hasta para el acero!
+
+Hundo la hoja en el aceite. Sale flexible y dura a la vez, con ondas que parecen olas. Es la espada maestra. Ningún pueblo podría haberla forjado solo.
+
+[[Volver al norte->Perdidos en el fin del mundo]]
+](else:)[
+No hay aceite, así que la enfrío en agua, como siempre. Se escucha un crujido y una grieta recorre la hoja de punta a punta.
+
+—¿No había un cocinero que hablaba de aceite y acero? —murmura Klas.
+
+[[Continuar->PERDER - Acero quebradizo]]
+]
+
+
+:: El último acertijo {"position":"2675,450","size":"100,100"}
+—La verdad es que me vendría bien un poco de ayuda —admití, hipnotizado por su belleza.
+
+Le entregué la tabla y le mostré el mecanismo escondido. Lo abrió en segundos. Dentro apareció un mapa.
+
+—Esto... —dice, sorprendida—. Este es mi pueblo. Está en el desierto. Yo los llevaré.
+
+—Encantado —le respondí sin pensarlo.
+
+Thorgrim me miraba molesto por sobre su hombro. Observó el mapa de reojo y algo en su mirada cambió.
+
+(set: $aisha to true)
+[[Partir al desierto->El pasado de Thorgrim]]
+
+
+:: En busca de la verdad {"position":"1550,300","size":"100,100"}
+—(if: $orgulloso)[No, no estoy bien. ]Necesito ayuda —dije desconcertado.
+
+Así, decidí visitar a Ralf, quien me recibió en su casa, junto al fuego.
+
+—Te estaba esperando, Asvald —dijo Ralf, como si ya supiera a qué iba.
+
+Procedí a contarle todo: las ciudades extrañas, el cielo rojo, la aldea en llamas. Ralf me escuchó en silencio, sin interrumpir. Cuando terminé, me miró fijamente.
+
+—Ya no tengo dudas —dijo—. Tú eres el elegido.
+
+[[Continuar->La revelación]]
+
+
+:: Entre las cenizas {"position":"3550,300","size":"100,100"}
+Tomo la mano de Aisha y ella me arrastra detrás de la columna, mientras las flechas de Gisela obligan a Thorgrim a retroceder.
+
+—¡Esto no termina aquí! —grita Thorgrim.
+
+Furioso, descarga su martillo contra los pilares hasta que el techo se derrumba sobre la forja. Luego desaparece en la noche. Mis amigos están a salvo.
+
+Calipso cura mis heridas durante días. Cuando por fin puedo levantarme, la Forja de Hefesto es solo un montón de piedras.
+
+—Asvald, mira esto —dice Aisha. Con el derrumbe, la tabla se partió, y por dentro hay un último acertijo escondido.
+
+Hakan lo traduce en voz alta:
+
+—"La forja nunca fue de piedra. Arde donde se juntan las manos de todos los pueblos."
+
+Por fin lo entiendo. No necesitamos la forja. Nos necesitamos entre nosotros.
+
+[[Construir una forja nueva->La espada maestra]]
+
+
+:: Instrucciones {"position":"150,450","size":"100,100"}
+{
+<div class="instrucciones">
+(print: '<img class="sprite retrato-grande" src="' + $rutaSprites + 'asvald.png" alt="Asvald">')
+<h2>Cómo jugar</h2>
+<p>Eres <b>Asvald</b>, herrero de una aldea vikinga del norte. Los sueños anuncian el fin del mundo, y quizás seas tú quien deba detenerlo.</p>
+<ul>
+<li><b>Lee y elige.</b> Haz clic en las opciones al final de cada escena para decidir qué hace Asvald.</li>
+<li><b>El sonido de espada</b> marca una decisión importante. «Continuar» solo avanza la historia.</li>
+<li><b>Puedes perder.</b> Hay varios finales de derrota y tres finales de victoria, según las decisiones y los aliados que consigas reunir.</li>
+<li><b>Inventario.</b> Con el botón 🎒 abajo a la derecha ves los objetos y compañeros que reúnes en el viaje. Algunos podrían servirte más adelante.</li>
+<li><b>Sube el volumen.</b> El juego tiene música y sonidos.</li>
+</ul>
+<p class="consejo">Un consejo del sabio Ralf: el mundo es más grande que nuestra aldea.</p>
+</div>
+<div class="portada-botones">
+[[Jugar->Una vida vikinga]]
+[[Volver a la portada->Portada]]
+</div>
+}
+
+:: Inventario [header] {"position":"150,900","size":"100,100"}
+{
+(set: _p to (passage:)'s name)
+(unless: _p is "Portada" or _p is "Instrucciones")[
+(if: _p is "Una vida vikinga")[(set: $inv to (a:), $aliados to (a:), $instantaneas to (dm:))]
+<!-- Al reintentar desde una escena ya visitada, se recupera el inventario que tenías la primera vez -->
+(if: $instantaneas contains _p)[
+(set: $inv to $instantaneas's (_p)'s inv, $aliados to $instantaneas's (_p)'s aliados)
+](else:)[
+(set: $instantaneas's (_p) to (dm: "inv", $inv, "aliados", $aliados))
+]
+(set: $nuevos to (a:), $perdidos to (a:), $seUnen to (a:), $seVan to (a:))
+(if: $eventos contains _p)[
+(set: $ev to (dm: "dar", (a:), "quitar", (a:), "unir", (a:), "dejar", (a:)) + $eventos's (_p))
+(for: each _id, ...$ev's quitar)[(if: $inv contains _id)[(set: $inv to it - (a: _id), $perdidos to it + (a: _id))]]
+(for: each _id, ...$ev's dar)[(unless: $inv contains _id)[(set: $inv to it + (a: _id), $nuevos to it + (a: _id))]]
+(for: each _id, ...$ev's dejar)[(if: $aliados contains _id)[(set: $aliados to it - (a: _id), $seVan to it + (a: _id))]]
+(for: each _id, ...$ev's unir)[(unless: $aliados contains _id)[(set: $aliados to it + (a: _id), $seUnen to it + (a: _id))]]
+]
+<div class="avisos">
+(for: each _id, ...$nuevos)[(print: '<div class="aviso"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><span>Obtienes: <b>' + $objetos's (_id)'s nombre + '</b></span></div>')]
+(for: each _id, ...$perdidos)[(print: '<div class="aviso aviso-malo"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><span>Pierdes: <b>' + $objetos's (_id)'s nombre + '</b></span></div>')]
+(for: each _id, ...$seUnen)[(print: '<div class="aviso"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><span><b>' + $personajes's (_id)'s nombre + '</b> se une al viaje</span></div>')]
+(for: each _id, ...$seVan)[(print: '<div class="aviso aviso-malo"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><span><b>' + $personajes's (_id)'s nombre + '</b> ya no está de tu lado</span></div>')]
+</div>
+(if: $retratos contains _p)[(set: $r to $retratos's (_p))(print: '<figure class="retrato"><img class="sprite" src="' + $rutaSprites + $r + '.png" alt=""><figcaption>' + $personajes's ($r)'s nombre + '</figcaption></figure>')]
+<details class="inventario">
+<summary>🎒 Inventario ((print: $inv's length + $aliados's length))</summary>
+<div class="inventario-panel">
+<h3>Objetos</h3>
+(if: $inv's length is 0)[<p class="vacio">No llevas nada.</p>](else:)[<div class="grilla">(for: each _id, ...$inv)[(print: '<div class="ficha"><img class="sprite" src="' + $rutaSprites + 'item_' + _id + '.png" alt=""><div><b>' + $objetos's (_id)'s nombre + '</b><small>' + $objetos's (_id)'s desc + '</small></div></div>')]</div>]
+<h3>Compañeros</h3>
+(if: $aliados's length is 0)[<p class="vacio">Viajas solo... por ahora.</p>](else:)[<div class="grilla">(for: each _id, ...$aliados)[(print: '<div class="ficha"><img class="sprite" src="' + $rutaSprites + _id + '.png" alt=""><div><b>' + $personajes's (_id)'s nombre + '</b><small>' + $personajes's (_id)'s desc + '</small></div></div>')]</div>]
+</div>
+</details>
+]
+}
+
+
+:: Inventario inicial [startup] {"position":"150,1050","size":"100,100"}
+{
+<!-- Carpeta de las imágenes (GitHub Pages), igual que BASE_SONIDOS en el StoryScript -->
+(set: $rutaSprites to "https://joaquindm02.github.io/Herrero_de_las_runas/sprites/")
+(set: $inv to (a:), $aliados to (a:), $instantaneas to (dm:))
+
+(set: $objetos to (dm:
+"espada", (dm: "nombre", "Espada de Asvald", "desc", "Forjada por tus manos, a la manera vikinga. Nunca se la has entregado a nadie."),
+"tabla", (dm: "nombre", "Tabla de acertijos", "desc", "Un metal que nadie conoce, cubierto de runas. Cada acertijo resuelto revela el siguiente destino."),
+"estrellas", (dm: "nombre", "Carta de estrellas", "desc", "Regalo de Klas. La estrella polar nunca se mueve."),
+"receta", (dm: "nombre", "Receta de Ottavio", "desc", "Aceite para cocinar, para curar... ¿y para el acero?"),
+"hierbas", (dm: "nombre", "Hierbas de Calipso", "desc", "Lo que no cura el fuego del norte, lo cura la paciencia."),
+"salvoconducto", (dm: "nombre", "Salvoconducto de Hakan", "desc", "Las palabras abren más puertas que las espadas."),
+"panuelo", (dm: "nombre", "Pañuelo de Aisha", "desc", "Seda de Bagdad. Huele a especias y a desierto."),
+"espada_rota", (dm: "nombre", "Espada rota", "desc", "Partida por el martillo de Thorgrim. Solo no pudiste."),
+"espada_maestra", (dm: "nombre", "Espada maestra", "desc", "Acero del norte, ondas del sur y el saber de todos los pueblos.")
+))
+
+(set: $personajes to (dm:
+"asvald", (dm: "nombre", "Asvald", "desc", "Herrero y guerrero vikingo."),
+"ralf", (dm: "nombre", "Ralf, el sabio", "desc", "El anciano que tuvo la visión."),
+"thorgrim", (dm: "nombre", "Thorgrim", "desc", "El navegante más experimentado del norte. Callado y de mirada dura."),
+"klas", (dm: "nombre", "Klas", "desc", "Vikingo chistoso que no para de hablar. Sabe leer las estrellas."),
+"gisela", (dm: "nombre", "Gisela", "desc", "Cazadora germana. Conoce cada sendero de su bosque."),
+"ottavio", (dm: "nombre", "Ottavio", "desc", "Cocinero italiano. Todo lo resuelve con aceite."),
+"calipso", (dm: "nombre", "Calipso", "desc", "Herborista griega. Tímida, pero sabe curar."),
+"hakan", (dm: "nombre", "Hakan", "desc", "Clérigo turco. Habla más idiomas de los que puedes contar."),
+"aisha", (dm: "nombre", "Aisha", "desc", "Bailarina de Bagdad, la de los dedos de seda.")
+))
+
+<!-- Qué se gana o se pierde al entrar a cada escena (por nombre de pasaje) -->
+(set: $eventos to (dm:
+"Una vida vikinga", (dm: "dar", (a: "espada")),
+"Se izan las velas", (dm: "dar", (a: "tabla"), "unir", (a: "thorgrim")),
+"Un nuevo aliado vikingo", (dm: "dar", (a: "estrellas"), "unir", (a: "klas")),
+"Sin espada", (dm: "unir", (a: "gisela")),
+"Ottavio se une", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
+"La disculpa", (dm: "dar", (a: "receta"), "unir", (a: "ottavio")),
+"Las hierbas de Calipso", (dm: "dar", (a: "hierbas"), "unir", (a: "calipso")),
+"Las palabras de Hakan", (dm: "dar", (a: "salvoconducto"), "unir", (a: "hakan")),
+"El último acertijo", (dm: "dar", (a: "panuelo"), "unir", (a: "aisha")),
+"La fiebre no se cura", (dm: "dejar", (a: "klas")),
+"La pérdida de un aliado", (dm: "dejar", (a: "thorgrim")),
+"La forja", (dm: "quitar", (a: "espada"), "dar", (a: "espada_rota")),
+"Entre las cenizas", (dm: "quitar", (a: "tabla")),
+"Perdidos en el fin del mundo", (dm: "quitar", (a: "espada_rota"), "dar", (a: "espada_maestra"))
+))
+
+<!-- Retrato que se muestra arriba de cada escena -->
+(set: $retratos to (dm:
+"Una vida vikinga", "asvald",
+"Se anuncia una visión", "ralf",
+"En busca de la verdad", "ralf",
+"La revelación", "ralf",
+"Se izan las velas", "thorgrim",
+"La primera tormenta", "thorgrim",
+"La aldea de Klas", "klas",
+"Aceptar la ayuda de Klas", "klas",
+"Klas y las estrellas", "klas",
+"Un nuevo aliado vikingo", "klas",
+"El bosque de Gisela", "gisela",
+"La mesa de Ottavio", "ottavio",
+"La disculpa", "ottavio",
+"La fiebre", "calipso",
+"Calipso", "calipso",
+"La frontera", "hakan",
+"La bailarina de Bagdad", "aisha",
+"El último acertijo", "aisha",
+"El pasado de Thorgrim", "thorgrim",
+"La propuesta de Thorgrim", "thorgrim",
+"El reencuentro", "thorgrim",
+"Las estrellas de Klas", "klas",
+"El duelo", "thorgrim"
+))
+}
+
+
+:: Klas y las estrellas [Decision] {"position":"2275,750","size":"100,100"}
+—Genial ¿Puedo ir con ustedes? —preguntó Klas, emocionado—. Nunca he visto las estrellas de otras tierras.
+
+Thorgrim lo ignoró y se fue de vuelta al barco.Yo me quedé pensandolo un momento.
+
+—Ralf dijo que conocería a buenos aliados que me ayudarían en mi viaje —pensé—. Pero pensaba que serían más imponentes que este debilucho. ¿Qué debería hacer?
+
+[[Aceptar a Klas como nuevo aliado->Un nuevo aliado vikingo]]
+[[Rechazar a Klas y volver al barco->Adios Klas]]
+
+
+:: La aldea de Klas [Decision] {"position":"2350,450","size":"100,100"}
+La primera parada fue una aldea vikinga lejana, como Ralf nos había dicho. Era muy distinta a mi aldea: las casas eran de varios colores y los habitantes usaban prendas que nunca habia visto. De la nada apareció otro vikingo como de mi misma edad.
+
+—¿Así que vienen del norte? He escuchado que es frío —dijo, dándome palmadas en la espalda—. ¿Sabían que desde allá las estrellas se ven distinto? Por ejemplo, hay una que...
+
+Lo detuve en seco y hablé por encima.
+
+—¿Y quién se supone que eres tú?
+
+—Jajaja perdón, olvidé presentarme. Soy Klas, vikingo de esta aldea y un apasionado por las estrellas.
+
+—Okay Klas, necesito ayuda con un acertijo. ¿Sabes de alguien que podría ayudarme?
+
+—Pues yo mismo estaría encantado en ayudarte —dijo Klas con cierta falsa modestia.
+
+Me quedé pensando. No sabía si podia confiar en este vikingo que acababa de conocer.
+
+<script>sonarLoop("music_cut.mp3");</script>
+<script>parar("waves.mp3");</script>
+
+[[Ignorarlo y buscar ayuda en otra parte->Sin ayuda de Klas]]
+[[Darle una oportunidad->Aceptar la ayuda de Klas]]
+
+
+:: Atravesar la tormenta {"position":"1950,600","size":"100,100"}
+(set: $barco_danado to true)
+
+—¡A los remos! —ordené, sin hacer caso a Thorgrim.
+
+Remamos con todas nuestras fuerzas. Logramos atravesar las olas, pero una roca sumergida golpea la quilla y deja una grieta en el casco. Thorgrim y yo conseguimos mantener el barco a flote y alcanzamos la primera aldea, aunque la embarcación queda seriamente dañada.
+
+—Puede que sobreviva al viaje de ida —gruñe Thorgrim—, pero no deberías haber desafiado al mar.
+
+No le respondí. No sabía que el daño acabaría decidiendo nuestro regreso.
+
+[[Seguir adelante->La aventura]]
+
+
+:: La aventura {"position":"2350,300","size":"100,100"}
+Al amanecer, la tormenta habia pasado. Thorgrim miró el cielo y fijó el rumbo sin decir nada. Él tuvo razón, y los dos lo sabíamos.
+
+Saqué la tabla y repasé lo que Ralf me había explicado: "En cada lugar del camino hay un acertijo, y solo alguien de esa tierra puede ayudarte a resolverlo. Cada respuesta te revelará el siguiente destino, y quien te ayude será un buen aliado en tu viaje.".
+
+—No creo que necesite ayuda de nadie —pensé—. Seguro que Thorgrim y yo podremos con todo.
+
+<script>parar("storm.mp3");</script>
+
+[[Llegar a la primera aldea->La aldea de Klas]]
+
+
+:: La bailarina de Bagdad [Decision] {"position":"2750,300","size":"100,100"}
+Bagdad era la ciudad más grande que había visto en mi vida: mercados interminables, bibliotecas, cúpulas doradas y un río lleno de barcos.
+
+En el mercado, una bailarina se movía entre la gente con una gracia que nunca había visto. Se llamaba Aisha, y todos la llamaban "dedos de seda". No pude dejar de mirarla, y no sabía muy bien por qué.
+
+El último acertijo de la tabla no era un texto: era un pequeño mecanismo escondido en el metal. Intenté resolverlo durante horas, pero mis manos de herrero era demasiado gruesas.
+
+—¿Qué haces, vikingo?¿Necesitas ayuda? —dijo Aisha, tan cerca de mi que pude oler su perfume de flores.
+
+Salte hacia atrás de la sorpresa. No había notado lo cerca que estaba.
+
+<script>sonarLoop("tavern.mp3");</script>
+<script>parar("music_cut.mp3");</script>
+
+[[Aceptar su ayuda->El último acertijo]]
+[[Rechazarla educadamente->No gracias Aisha]]
+
+
+:: La disculpa {"position":"2225,1750","size":"100,100"}
+(set: $ottavio to true)
+Volví a la cocina con la cabeza gacha. Pedir perdón me cuesta más que cualquier combate.
+
+—Ottavio... lo siento. Fui un bruto.
+
+Ottavio me mira un largo rato. Luego, sin decir nada, me sirve un plato. Como. Está delicioso.
+
+—Disculpas aceptadas —dijo al fin, conmovido—. Y voy con ustedes.
+
+Carga diez ánforas de aceite en el barco.
+
+—Sirve para todo: para cocinar, para curar... ¡hasta para el acero!
+
+(if: $klas)[[[Navegar a Grecia->La fiebre]]](else:)[[[Navegar a Grecia->Calipso]]]
+
+
+:: La espada del mercader {"position":"450,600","size":"100,100"}
+—De dónde has sacado esa espada, padre? —dije, con bastante intriga. Pensaba que quizás procedía de alguna aldea del norte.
+
+ —Se la compré al mercader esta mañana —respondió con cierta modestia—. Me dijo que es de la próspera ciudad de Bagdad, hecha con una aleación de acero que es prácticamente indestructible.
+    
+Podía ver la emoción en los ojos de mi padre. Siempre tuvo una fascinación por los objetos extranjeros. Pero yo no lo soportaba.
+    
+—¡Bah! —dije, con rechazo— ¿Qué va a ser indestructible esa espada? Es imposible que sea mejor que las vikingas.
+    
+    [[Darle con el martillo a la espada->El quiebre de la espada curva]]
+    [[Ignorar la espada y cambiar de tema->La reunión del pueblo]]
+
+
+:: La espada maestra [Decision] {"position":"3550,450","size":"100,100"}
+Entre las ruinas armamos una forja improvisada, y cada uno aporta lo suyo.
+
+—Un fuelle hecho con pieles de mi caza —dice Gisela.
+
+—Esta noche las estrellas estarán perfectas —dice Klas, mirando el cielo.
+
+—Estas plantas, mezcladas con el carbón, hacen más fuerte el acero —explica Calipso.
+
+—Las inscripciones de los muros dicen cómo empezar —traduce Hakan.
+
+Aisha toma el metal y, con sus dedos de seda, dibuja en él un patrón de ondas.
+
+Pero cuando llega el momento de golpear, dudo. Mi padre me enseñó a forjar de una sola manera: la manera vikinga. Es lo único que conozco de verdad.
+
+<script>parar("sword_fight.mp3");</script>
+
+[[Forjar a la vikinga->PERDER - Acero quebradizo]]
+[[Combinar todas las técnicas->El temple]]
+
+
+:: La fiebre [Decision] {"position":"2425,1900","size":"100,100"}
+En el viaje hacia Grecia, Klas cae enfermo. Arde en fiebre y ya no reconoce a nadie.
+
+Al llegar a las ruinas de un templo encontramos a una joven recogiendo plantas entre las columnas. Se llama Calipso y es herborista. Casi sin mirarnos a los ojos, se acerca a Klas.
+
+—Tengo... tengo unas hierbas que pueden ayudarlo —dijo en voz baja—. Hay que preparar una infusión.
+
+Thorgrim la aparta.
+
+—En el norte la fiebre se cura con fuego. Se le hace sudar junto a las brasas y se le da hidromiel. Así se ha hecho siempre.
+
+Los dos me miran, esperando que decida.
+
+<script>parar("feast.mp3");</script>
+<script>sonarLoop("music_cut.mp3");</script>
+
+
+[[Confiar en las hierbas de Calipso->Las hierbas de Calipso]]
+[[Curarlo como en el norte->La fiebre no se cura]]
+
+
+:: La fiebre no se cura {"position":"2350,2050","size":"100,100"}
+—Lo curaremos como en el norte —decidí, sin saber lo que pasaría.
+
+Ponemos a Klas junto al fuego y le damos hidromiel, pero la fiebre sube en vez de bajar. Al día siguiente, Klas no despierta...
+
+Pasé todo el día cavando la tumba de Klas.
+
+Thorgrim se me acercó después para decirme que tenemos poco tiempo.
+
+Debemos continuar.
+
+(set: $klas to false)
+[[Continuar->Nos despedimos de Calipso]] 
+
+
+:: La forja [Decision] {"position":"3150,750","size":"100,100"}
+Thorgrim se lanza contra mis amigos. Me interpongo en su camino para defenderlos.
+
+—¡Si quieres llegar a ellos, tendrás que pasar por mí!
+
+—Con gusto —responde.
+
+Es más fuerte que yo y está ciego de rabia. Al tercer golpe, su martillo parte mi espada en dos. El siguiente me lanza contra el yunque. Quedo en el suelo, aturdido y con media espada en la mano, mientras Thorgrim se acerca para terminar conmigo.
+
+—¡Asvald, ven! —me llama Aisha, tendiéndome la mano desde detrás de una columna.
+
+Gisela tensa su arco. Mis amigos se disponen a ayudarme, pero todavía puedo decidir si aceptar su ayuda o dejar que mi orgullo me condene.
+
+<script>sonarLoop("sword_fight.mp3");</script>
+
+[[Rechazar su ayuda y atacar solo->PERDER - El martillo de Thorgrim]]
+[[Aceptar la ayuda de mis amigos->Entre las cenizas]]
+
+:: La frontera [Decision] {"position":"2350,2250","size":"100,100"}
+El camino hacia el oriente estaba cerrado por una ciudad amurallada.
+
+—Ningún extranjero armado pasa por aquí —nos dijo un guardia, cruzando su lanza frente a nosotros.
+
+Junto a la puerta, un hombre de túnica nos observa con curiosidad. Se nos presenta como Hakan, un clérigo turco. Nos habló en nuestro idioma, luego al guardia en el suyo y después a un mercader en un tercero.
+
+—Déjenme hablar con los guardias —nos propuso—. Las palabras pueden abrir más puertas que el filo de sus espadas.
+
+Thorgrim me lleva aparte.
+
+—No confíes en este sacerdote, muchacho. No sabemos qué le puede decir a ese guardia. Esta noche escalamos el muro por el lado norte. Es lo más seguro, confía en mí.
+
+[[Dejar que Hakan hable->Las palabras de Hakan]]
+[[Seguir el plan de Thorgrim->Por la fuerza]]
+
+
+:: La mesa de Ottavio [Decision] {"position":"2350,1450","size":"100,100"}
+La tabla nos llevó a una ciudad en las tierras de Italia, con casas de piedra y un mar color turquesa. El acertijo de la tabla hablaba de "lo que el sur pone en la mesa".
+
+En el puerto nos recibió Ottavio, un cocinero que suspiraba con cada palabra.
+
+—¡Viajeros! ¡Bienvenidos! —dijo, abriendo los brazos—. Yo los ayudaré con su acertijo, pero primero, ¡A comer!
+
+Nos sentamos frente a un banquete: pan, queso, aceitunas, vino y un aceite dorado que Ottavio cuidaba como si fuera oro.
+
+Recuerdo mirar los platos con desconfianza. Olían raro, a especias que jamás había conocido. Sin embargo, todo parecía comida digna de los mismos dioses.
+
+<script>parar("forest.mp3");</script>
+<script>sonarLoop("feast.mp3");</script>
+
+[[Comer el banquete->Ottavio se une]]
+[[Rechazar la comida->Un plato roto]]
+
+
+:: La pesadilla {"position":"750,600","size":"100,100"}
+Antes de dormir, fui a ver a Sigrid y le di un beso en la frente.
+
+—¿Todo estará bien, Asvald? ¿Tú nos protegerás? —me preguntó, medio dormida.
+
+—Siempre —le dije.
+
+Esa misma noche, soñé con el fin del mundo.
+
+[[Continuar->El sueño]]
+
+
+:: La primera tormenta [Decision] {"position":"1950,450","size":"100,100"}
+La primera noche en alta mar estalló una tormenta enorme. Las olas golpeaban el barco como martillos.
+
+—¡Echen el ancla junto a esas rocas! —gritó Thorgrim—. ¡Hay que esperar a que pase! Contra este mar no ganaremos jamás.
+
+Yo apreté los dientes. Nunca había perdido contra nada, y no me gustó la idea de rendirnos.
+
+<script>sonarLoop("storm.mp3", 1);</script>
+<script>parar("music_cut.mp3");</script>
+
+[[Hacerle caso a Thorgrim y esperar->La aventura]]
+[[Atravesar la tormenta remando->Atravesar la tormenta]]
+
+:: La propuesta de Thorgrim [Decision] {"position":"2750,750","size":"100,100"}
+Esa noche, mientras los demás dormían, Thorgrim me despertó.
+
+—Escúchame bien —me susurró—. Ya sabemos dónde está la forja. No los necesitamos más. Partamos al amanecer, solos tú y yo. La espada que salve al norte debe ser forjada por manos vikingas, no por esta banda de extranjeros.
+
+Miré a mis compañeros dormidos alrededor del fuego: 
+(if: $klas)[* Klas]
+(if: $gisela)[* Gisela]
+(if: $ottavio)[* Ottavio]
+(if: $calipso)[* Calipso]
+(if: $hakan)[* Hakan]
+(if: $aisha)[* Aisha]
+
+Sentí que estaba contra la espada y la pared. No estaba seguro qué hacer.
+
+[[Irme solo con Thorgrim->PERDER - La sombra del norte]]
+[[Quedarme con mis amigos->El pueblo del pasado]]
+
+
+:: La pérdida de un aliado {"position":"3150,600","size":"100,100"}
+Todo pasa muy rápido.
+
+—¡Me robaste la vida! —grita Thorgrim.
+
+—Eran otros tiempos... yo... —intenta explicar el anciano.
+
+—¡Abuelo! —Aisha se interpone, pero Thorgrim la empuja a un lado.
+
+La discusión se vuelve furia, y la furia se vuelve un golpe de martillo. El abuelo de Aisha cae y no vuelve a levantarse.
+
+Aisha grita. Thorgrim se da vuelta hacia nosotros, con los ojos llenos de odio.
+
+—¡Todos ustedes son iguales! —ruge—. Y tú, Asvald... ¡eres un traidor a tu pueblo!
+
+[[Desenvainar la espada->La forja]]
+
+
+:: La reunión del pueblo {"position":"450,900","size":"100,100"}
+—Bueno, cambiando de tema —dije, desinteresado—. Supe que habrá una reunión del pueblo.
+
+—Así es hijo —respondió mi padre—. Y ahora que eres todo un adulto, tienes el deber de asistir a ella también.
+
+—Mientras no sea aburrida —dije, soltando un bostezo—, no tengo problema.
+
+Mi padre suspira (if: not $espada_curva)[de nuevo] y le pide a los dioses en silencio que ayuden a madurar a su hijo.
+
+[[Ir a la reunión->Se anuncia una visión]]
+
+
+:: La revelación [Decision] {"position":"1550,450","size":"100,100"}
+—Tu camino te llevará hasta la Forja de Hefesto —me explicó Ralf—, el dios griego de los herreros. Está en tierras muy lejanas, más allá de todo lo que conoces.
+
+Saca de un cofre una tabla de un metal que nunca había visto, cubierta de acertijos.
+
+—Cada acertijo que resuelvas te mostrará el siguiente paso del camino —dijo Ralf—. Resuélvelos todos y llegarás a la forja.
+
+Dudé un segundo antes de tomar la tabla, y Ralf lo notó.
+
+—Sé que no confías en los extranjeros, muchacho. Pero el mundo es más grande que nuestra aldea. Y el fin del mundo también.
+
+[[Tomar la tabla->Se izan las velas]]
+[[Rechazarla y pedir que vaya otro->PERDER - Que vaya otro]]
+
+
+:: La sorpresa de su padre {"position":"450,450","size":"100,100"}
+Cuando salí del taller y entré a la casa, estaba mi padre esperándome con el mismo delantal de cuero que lleva usando desde que tenía memoria. 
+
+Mi padre es un herrero, al igual que lo fue su padre y el padre de él, y, siguiendo la tradición, aprendí la profesión de él que hoy ejerce con orgullo y pasión.
+    
+ —Mira lo que me han ofrecido esta mañana —dijo, emocionado.
+    
+Mi padre me muestra una espada curva con un metal distinto al que usan en la tienda. El nuestro es un metal grisaceo y que normalmente muestra varias líneas paralelas a lo largo de las espadas que se forjan con este acero, pero esta espada curva brillaba como ninguna espada que haya visto antes, y era completamente lisa, sin la más mínima imperfección.
+    
+    [[Preguntar por la espada->La espada del mercader]]
+
+
+:: Matar a Thorgrim {"position":"4350,900","size":"100,100"}
+(set: $thorgrim_muerto to true)
+
+Thorgrim está de rodillas, desarmado, y el ejército entero espera mi decisión. Levanto la espada maestra y lo mato.
+
+No hay gritos de victoria. Solo silencio, y la certeza de que ninguna explicación podrá deshacer lo que acabo de hacer.
+
+[[Contar la verdad al ejército->La verdad]]
+
+
+:: La verdad {"position":"4350,750","size":"100,100"}
+(if: $thorgrim_muerto)[Thorgrim yace en la nieve. No siento orgullo por haberlo matado; solo el peso de una decisión que ya no puedo deshacer.](else:)[Clavo la espada en la nieve, junto a Thorgrim.
+
+—No voy a matarte —le digo—. Lo que te hicieron no se borra, Thorgrim. Pero ese hombre no era todos los extranjeros. Y yo no soy todos los vikingos.
+
+Thorgrim me mira sin entender.]
+
+Me giro hacia el ejército y les cuento toda la verdad: la visión de Ralf, el viaje, los acertijos, los amigos que me salvaron y la espada que pude forjar gracias a las enseñanzas que reuní por el camino.
+
+—Me fui de aquí creyendo que éramos mejores que todos —les digo—. Volví sabiendo que solos no somos nada.
+
+Mi pueblo me mira distinto. Ya no soy el vikingo soberbio que se fue: soy un líder humilde. Uno a uno, los guerreros del norte bajan las armas.
+
+Esa noche, por primera vez en meses, el cielo deja de estar rojo. El Ragnarök se detiene. No era un ejército ni un monstruo lo que amenazaba al mundo, sino el odio que nos hacía luchar unos contra otros.
+
+<script>parar("sword_fight.mp3");</script>
+
+(set: $total_aliados to 0)
+(if: $klas)[(set: $total_aliados to $total_aliados + 1)]
+(if: $gisela)[(set: $total_aliados to $total_aliados + 1)]
+(if: $ottavio)[(set: $total_aliados to $total_aliados + 1)]
+(if: $calipso)[(set: $total_aliados to $total_aliados + 1)]
+(if: $hakan)[(set: $total_aliados to $total_aliados + 1)]
+(if: $aisha)[(set: $total_aliados to $total_aliados + 1)]
+
+(if: $klas and $gisela and $ottavio and $calipso and $hakan and $aisha)[
+[[Continuar al final de todos unidos->El fin]]
+](else:)[
+(if: $total_aliados < 4)[
+(if: $aisha)[[[Continuar->El fin con Aisha]]](else:)[[[Continuar->El fin solitario]]]
+](else:)[
+(if: $aisha)[
+Aunque había reunido a cuatro o cinco compañeros, no había logrado reunir a todos los pueblos. La victoria tendría un precio, y Aisha sería la única de mis compañeros que regresaría conmigo.
+[[Continuar->El fin con Aisha]]
+](else:)[
+Aunque había reunido a cuatro o cinco compañeros, no había logrado reunir a todos los pueblos. La victoria tendría un precio, y volvería solo a mi aldea.
+[[Continuar->El fin solitario]]
+]
+]
+]
+
+:: Las estrellas de Klas {"position":"3950,450","size":"100,100"}
+—Klas, ¿qué miras?
+
+—Ahí —dice, señalando un pequeño hueco entre las nubes rojas—. La que no se mueve.
+
+La estrella polar. La misma del primer acertijo.
+
+—Al principio del viaje había que darle la espalda —dice Klas, sonriendo—. Ahora hay que seguirla para volver a casa.
+
+Klas guía el barco noche tras noche, buscando la estrella entre las nubes. Cuando por fin aparece la costa del norte, veo humo en el horizonte. Viene de mi aldea.
+
+
+[[Desembarcar->El ejército del norte]]
+
+
+:: Las hierbas de Calipso {"position":"2500,2050","size":"100,100"}
+—Hazlo —le digo a Calipso.
+
+Ella prepara la infusión y (if: $klas)[cuida a Klas](else:)[cuida de mi herida] toda la noche. Al amanecer, (if: $klas)[la fiebre ha bajado](else:)[mi herida ya está sanada].(if: $klas)[
+
+—¿Me perdí de algo? —pregunta Klas con la voz ronca—. Soñé que las estrellas me hablaban en griego.
+
+Calipso sonríe por primera vez. Ya más tranquila, nos muestra una inscripción griega entre las ruinas.
+
+Allí](else:)[
+
+Thorgrim entró a la tienda impaciente y preguntó si podemos seguir avanzando de una vez por todas.
+
+—Siganme —dijo Calipso—. Les mostraré la inscripción que buscan.
+
+Una vez llegan al lugar], Calipso les cuenta una leyenda identica a la visión de Ralf.
+
+—Habla de Hefesto, el dios herrero de mi pueblo —explica—. Conozco su leyenda desde niña.
+
+La inscripción revela el siguiente destino: un paso hacia el oriente.
+
+—Quiero ir con ustedes —dijo Calipso—. Quiero ver la forja con mis propios ojos.
+
+(set: $calipso to true)
+[[Viajar al oriente->La frontera]]
+
+
+:: Las palabras de Hakan {"position":"2275,2400","size":"100,100"}
+Por intuición, decidí confiar en las palabras de Hakan.
+
+—Habla con ellos, Hakan.
+
+Hakan conversó con los guardias durante una hora. Hay risas, apretones de manos y hasta una taza de té. Al final, las puertas se abren.
+
+—¿Qué les dijiste? —le pregunté, asombrado.
+
+—La verdad —respondió, sonriendo—. Que vienen a salvar el mundo. Y que pagan bien.
+
+En una biblioteca de la ciudad, Hakan traduce la siguiente parte de la tabla: el camino sigue hacia Bagdad.
+
+—Quiero ver cómo termina esta historia —dijo Hakan—. Si me lo permiten, iré con ustedes.
+
+Thorgrim no dice nada, pero noto que aprieta los puños cada vez que Hakan habla.
+
+(set: $hakan to true)
+[[Viajar a Bagdad->La bailarina de Bagdad]]
+
+
+:: Martillo y negación [Decision] {"position":"1150,600","size":"100,100"}
+(set: $orgulloso to true)
+—Si el fin del mundo viene, que venga. Lo voy a esperar con mi espada y mi martillo. —dije, obstinado.
+
+Durante semanas trabajé día y noche. Forjé hachas, escudos y lanzas para toda la aldea, pero los sueños solo empeoraron. Ahora veía a Sigrid llamándome entre el humo, y por más que corría, nunca lograba alcanzarla a tiempo.
+
+—Hijo, ¿está todo bien? —me preguntó mi madre una noche.
+
+[[Seguir trabajando->PERDER - El herrero que se quedó]]
+[[Tragarme el orgullo y pedir ayuda->En busca de la verdad]]
+
+
+:: No gracias Aisha {"position":"2825,450","size":"100,100"}
+—Agradezco tu oferta, pero debo rechazarla —dije cortésmente.
+
+—Una lástima —me respondió—. Tendré que buscar a otro hombre atractivo que quiera mi ayuda.
+
+Dicho eso, Aisha desapareció entre las masas.
+
+(if: $calipso)[—Emm... ¿Asvald? —dijo Calipso, tímida— ¿Me dejarías intentarlo a mí?
+
+Dejé que Calipso lo intente y logró resolverlo en unos segundo. Dentro apareció un mapa.
+
+Thorgrim le quitó el mapa de las manos a Calipso.
+
+—Yo conozco este lugar... —dijo con suspenso.
+
+Después de un segundo de silencia, Thorgrim me dijo que él guiaría el camino.
+
+[[Partir al desierto->El pasado de Thorgrim]]](else:)[—¿Qué haremos ahora? —me pregunté en voz alta.
+
+Seguimos intentando resolver el mecanismo, pero no logramos resolverlo a tiempo. El cielo se pinta de un color rojo, anunciando el final.
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]]
+
+
+:: Nos despedimos de Calipso {"position":"2200,2050","size":"100,100"}
+—Está bien —dije—. Sigamos adelante.
+
+Nos despedimos de Calipso y fuimos a buscar la inscripción en las ruinas.
+
+Después de un buen rato buscando, logramos encontrar la inscripción que señalaba nuestro siguiente destino: un paso hacia el oriente.
+
+[[Viajar al oriente->La frontera]] 
+
+
+:: Ottavio se une {"position":"2425,1600","size":"100,100"}
+(set: $ottavio to true)
+Pruebo un pedazo de pan con aceite y, para mi sorpresa, no puedo parar de comer.
+
+—¡Ah! ¡Un hombre de buen gusto! —dijo Ottavio, feliz—. Ahora sí, el acertijo. Habla del aceite. Bajo mi cocina hay una vieja prensa romana con una inscripción parecida a las runas en la tabla.
+
+Bajamos, y la inscripción encajaba con la tabla: el siguiente destino eran unas ruinas en Grecia.
+
+—Voy con ustedes —anunció Ottavio, mientras cargaba diez ánforas en el barco—. Y llevo mi aceite. Sirve para todo: para cocinar, para curar... ¡hasta para el acero!
+
+No le presté mucha atención y seguimos adelante.
+
+(if: $klas)[[[Navegar a Grecia->La fiebre]]](else:)[[[Navegar a Grecia->Calipso]]]
+
+
+:: PERDER - A la deriva en el fin del mundo [PERDER] {"position":"4150,300","size":"100,100"}
+El cielo está cubierto y el mar parece no tener fin. (if: $klas)[Klas había reconocido la estrella polar, pero elegí seguir mi instinto en vez de escucharlo.](else:)[Sin Klas, ninguno de nosotros sabe encontrar la estrella polar ni calcular el rumbo correcto.] El barco da vueltas en un mar rojo y enloquecido hasta que la tormenta nos aleja de toda costa.
+
+No encontramos otra ruta para volver a la aldea antes de que el Ragnarök alcance el norte.
+
+(text-color:red)[Has perdido: no lograste encontrar el camino a casa.]
+
+[[Volver al inicio->Una vida vikinga]]
+
+:: PERDER - Acero quebradizo [PERDER] {"position":"3750,550","size":"100,100"}
+La espada parece terminada, pero en la primera prueba se parte en dos como si fuera de vidrio. Sin espada y sin forja, no tenemos cómo enfrentar lo que viene, y el Ragnarök cae sobre el mundo.
+
+(if: $ottavio is false)[Quizás un cocinero italiano sabía algo que yo no.
+[[Volver a Italia con Ottavio->La mesa de Ottavio]]
+]
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - El herrero que se quedó [PERDER] {"position":"1350,600","size":"100,100"}
+—No, pero eso no importa si queremos salvar al pueblo. —le respondí a mi madre.
+
+Al poco tiempo llegó el Ragnarök, una noche sin luna. Las armas que había forjado eran buenas, pero no lo suficiente. Lo que venía del mar era más grande que cualquier aldea.
+
+Mientras todo ardía a su alrededor, entendí, ya demasiado tarde, que la fuerza y el esfuerzo de un simple herrero jamás habrían sido suficiente.
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - El martillo de Thorgrim [PERDER] {"position":"3350,750","size":"100,100"}
+Rechacé la mano de mis amigos y me lancé contra Thorgrim con la espada rota. No tuve ninguna oportunidad. Su último golpe me dejó inconsciente.
+
+Cuando despierto por un instante, escucho a mis compañeros pedir ayuda; Thorgrim también los ha vencido. Nos encierra a todos en la forja derruida y bloquea la salida con los restos de piedra. Nadie puede avisar a mi pueblo ni terminar la espada maestra. El tiempo pasa y el Ragnarök cae sobre el mundo.
+
+(text-color:red)[Has perdido: el orgullo te hizo rechazar la ayuda que necesitabas.]
+
+[[Volver al inicio->Una vida vikinga]]
+
+:: PERDER - El último vikingo [PERDER] {"position":"4550,300","size":"100,100"}
+Rechacé la ayuda de mis compañeros y avancé solo contra el ejército del norte. La espada maestra es la mejor que se ha forjado jamás, pero sigue siendo una sola espada. Derribo a varios guerreros antes de caer bajo el peso de los que me rodean.
+
+Mi familia queda desprotegida y la defensa de la aldea se rompe. Lo último que veo es a Sigrid en la entrada, mientras el cielo se vuelve rojo. No puedes salvar a todos enfrentándote solo a un ejército.
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]
+
+:: PERDER - La sombra del norte [PERDER] {"position":"2950,750","size":"100,100"}
+Partimos antes del amanecer, solo Thorgrim y yo.
+
+Llegamos al pueblo y encontramos la entrada de la forja, sellada con un mecanismo tan fino como el de la tabla. Lo intento una y otra vez, pero no logro abrirlo.
+
+—¡Apártate! —rugió Thorgrim, y golpea la puerta con su martillo hasta que la montaña entera se derrumba sobre la forja.
+
+Vuelvo al norte con las manos vacías, cada día más parecido a Thorgrim.
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Que vaya otro [PERDER] {"position":"1750,450","size":"100,100"}
+—Que vaya otro —le dije, y le devuelvo la tabla.
+
+Ralf, resignado, envió a otro joven en mi lugar. El barco parte una mañana gris y nunca vuelve.
+
+Meses después, el cielo se tiñe de rojo y el Ragnarök cae sobre el norte. La tabla nunca encontró a su verdadero dueño.
+
+(text-color:red)[Has perdido]
+
+[[Volver al inicio->Una vida vikinga]]
+
+
+:: PERDER - Tragados por el mar [PERDER] {"position":"2150,450","size":"100,100"}
+El daño que sufrió el barco durante la primera tormenta resultó peor de lo que creíamos. Cuando Thorgrim nos abandona y tratamos de volver al norte, las olas golpean el casco debilitado y la grieta se abre por completo.
+
+Intentamos mantener el barco a flote, pero termina hundiéndose en el mar rojo. Sin barco y sin una ruta alternativa, no llegamos a la aldea de Asvald a tiempo. El Ragnarök avanza mientras quedamos a la deriva.
+
+(text-color:red)[Has perdido: el barco no resistió los daños de la tormenta.]
+
+[[Volver al inicio->Una vida vikinga]]
+
+:: Perdidos en el fin del mundo [Decision] {"position":"3950,300","size":"100,100"}
+Con la espada maestra, emprendemos el regreso al norte. Pero el Ragnarök ya comenzó: el cielo está rojo, el sol apenas brilla y el mar se ha vuelto loco. Thorgrim ya no está con nosotros, y debemos encontrar nuestro propio camino a casa.
+
+(if: $barco_danado)[Durante la primera tormenta decidí seguir remando en vez de esperar. El barco sobrevivió entonces, pero el casco quedó dañado. Ahora las olas vuelven a golpearlo y el agua comienza a entrar por las grietas. No importa cuánto intentemos achicarla: el barco se hunde antes de alcanzar la costa. Sin embarcación no podremos llegar a la aldea a tiempo para detener el Ragnarök.
+
+[[Intentar salvar el barco->PERDER - Tragados por el mar]]](else:)[
+(if: $klas)[Sin Thorgrim, nadie sabe navegar de vuelta. Después de días sin rumbo, empezamos a perder la esperanza.
+
+—Estamos perdidos —dice Hakan.
+
+—No —respondo—. Yo conozco el norte. Un vikingo siempre sabe dónde está su casa.
+
+Klas, por primera vez en todo el viaje, no hace ningún chiste. Está mirando fijamente el cielo.
+
+<script>sonarLoop("waves.mp3");</script>
+<script>sonarLoop("cricket.mp3");</script>
+
+[[Navegar por instinto->PERDER - A la deriva en el fin del mundo]]
+[[Preguntarle a Klas qué mira->Las estrellas de Klas]]
+](else:)[Sin Klas, no sabemos reconocer la estrella polar ni tenemos otra forma de orientarnos. Intentamos guiarnos por la costa, pero las nubes rojas ocultan el cielo y el barco da vueltas durante días. No encontraremos el camino a casa a tiempo.
+
+[[Intentar encontrar el norte sin Klas->PERDER - A la deriva en el fin del mundo]]]
+]
+
+:: Por la fuerza {"position":"2425,2400","size":"100,100"}
+—Esta noche, por el muro —le dije a Thorgrim.
+
+A medianoche escalamos. Thorgrim es el primero en llegar arriba, y el primero en ver a un par de guardias que estaban justo donde aterrizó. Ellos pensaron que era una invasión y desenvainaron sus armas. No tuvimos más remedio que pelear con ellos y matarlos.
+
+Logramos infiltrarnos en la biblioteca de la ciudad, pero no logramos traducir la siguiente pista, asi que tuvimos que robarnos un libro de traducciones y decifrarlo por nuestra cuenta.
+
+Pasaron tres días cuando recién pudimos decifrar la siguiente parte de la tabla: el camino sigue hacia Bagdad.
+
+—Vamos muchacho, queda poco —dijo Thorgrim.
+
+Sentí que había cierta satisfacción en él al lograr traducir la pista. En lo único que pensaba yo era en los guardias que asesinamos por esa pista.
+
+[[Viajar a Bagdad->La bailarina de Bagdad]]
+
+
+:: Portada {"position":"150,300","size":"100,100"}
+{
+<div class="portada">
+(print: '<img class="portada-img" src="' + $rutaSprites + 'portada.png" alt="Asvald frente a la forja, mirando el camino del norte a Bagdad">')
+<div class="portada-titulo">
+<div class="runas">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+<h1>El Herrero de las Runas y las Arenas</h1>
+<p class="subtitulo">Una aventura interactiva sobre fuego, hierro y destino</p>
+</div>
+</div>
+<div class="portada-botones">
+[[Jugar->Una vida vikinga]]
+[[Instrucciones]]
+</div>
+<p class="creditos">Diego Herrera A · Joaquín Domínguez · César Balladares<br>Tarea 2 · Creación de Videojuegos</p>
+}
+
+
+:: Se anuncia una visión {"position":"750,300","size":"100,100"}
+Era un día de tormenta, y Ralf el sabio había convocado a todo el pueblo. Nunca lo había visto tan serio.
+
+—He tenido una visión —dijo Ralf, y todos guardaron silencio—. Se avecina el Ragnarök. El fin del mundo.
+
+Un murmullo de miedo recorrió la sala.
+
+—Pero no todo está perdido —continúa—. Los dioses me mostraron a un elegido, alguien capaz de detenerlo. Él o Ella tendrá que viajar por tierras lejanas hasta la Forja de Hefesto, y allí forjar la espada que salvará al mundo.
+
+—¿Y quién es? —grita alguien desde el fondo.
+
+—No lo sé —respondió Ralf—. Solo sé que aparecerá cuando llegue el momento.
+
+Al oir esto, quedé en blanco, solo pensé en mi hermana y que debía protegerla a toda costa.
+
+ <script>parar("smith.mp3");</script>
+
+[[Volver a la casa->Después de la reunión]]
+
+
+:: Se izan las velas {"position":"1950,300","size":"100,100"}
+Ralf llamó a Thorgrim, el navegante más experimentado de la aldea. Él era un hombre callado, de mirada dura, que ha navegado más mares que nadie en el norte.
+
+—Thorgrim, acompañarás a Asvald y lo guiarás hacia su destino —le ordenó Ralf.
+
+Thorgrim me miró de arriba abajo, me extendió su mano y asintió sin decir palabra.
+
+—Su primer destino es una aldea vikinga al otro lado del mar —nos dijo Ralf—. Allí los espera el primer acertijo.
+
+Me despedí de mi familia en el muelle. Recuerdo que Sigrid me abrazó tan fuerte que casi no me dejó respirar.
+
+—Prométeme que vas a volver —me dijo ella. 
+
+—Te lo prometo. 
+
+El barco zarpó y, por primera vez, ví mi aldea hacerse pequeña en el horizonte.
+
+<script>sonarLoop("waves.mp3", 1);</script>
+
+[[Continuar->La primera tormenta]]
+
+
+:: Sin ayuda de Klas {"position":"2425,600","size":"100,100"}
+—No, gracias. Prefiero buscar la ayuda de alguien más sabio.
+
+—Oh... Okay —dijo Klas, triste—. Te guiaré a la casa del sabio.
+
+Una vez llegamos a la casa del sabio, Klas se despidió, y Thorgrim y yo nos despedimos rápidamente de él. Nunca lo volví a ver. 
+
+Tocamos la puerta y el sábio nos recibió, abriendo la puerta con dificultad.
+
+—¿En qué puedo ayudarlos, jóvenes?
+
+—Necesitamos su ayuda para resolver un acertijo. Dice así:
+
+"Todos giran a mi alrededor, pero yo nunca me muevo. Dame la espalda y encontrarás el camino."
+
+El anciano se quedó pensando por un momento y respondió.
+
+—Es la estrella polar. Es la única estrella que nunca gira, y siempre marca el norte. Si le das la espalda, apunta la sur.
+
+Ante la respesta del anciano, las runas de la tabla brillaron y mostraron el simbolo de un árbol.
+
+—Parece que el próximo destino serán las tierras germanas —dijo Thorgrim—. Gracias anciano.
+
+Thorgrim y yo volvimos al barco y zarpamos hacia nuestro nuevo destino.
+
+[[Continuar->El bosque de Gisela]]
+
+
+:: Sin espada {"position":"2275,1250","size":"100,100"}
+—Continuaremos sin nuestras espadas —dije, decidido.
+
+Al oir esto, Thorgrim me juzgó con la mirada, pero no dijo nada. Le entregamos nuestras armas a Gisela y nos agradeció nuestra confianza.
+
+Gisela nos guió por senderos que yo nunca habría visto, esquivando trampas para lobos. Después de horas llegamos a un roble gigantesco con un mensaje grabado en la corteza. Lo comparé con la tabla y señalaba el siguiente destino: una ciudad junto a un mar cálido, más al sur.
+
+Gisela nos devolvió nuestras armas.
+
+—Para ser vikingo, no eres tan tonto —me dijo—. Voy con ustedes. Quiero ver qué hay más allá de los árboles.
+
+(set: $gisela to true)
+[[Seguir al sur->La mesa de Ottavio]]
+
+
+:: Sonidos [footer] {"position":"150,750","size":"100,100"}
+{
+(if: (passage:)'s tags contains "Decision")[<span class="marca-decision"></span>]
+(if: (passage:)'s tags contains "PERDER")[<script> sonar("boom.mp3");</script>]
+}
+
+
+:: Todos para uno y uno para todos {"position":"4350,450","size":"100,100"}
+Me detengo a pensar y miro a mi alrededor.
+
+(if: $klas)[Klas, que me enseñó a leer las estrellas, está preparado para guiarnos.]
+(if: $gisela)[Gisela, que me guio por su bosque, cubre el camino con su arco.]
+(if: $calipso)[Calipso, que nos ayudó con sus hierbas, se ocupa de los heridos.]
+(if: $ottavio)[Ottavio pone sus conocimientos y su aceite al servicio de la defensa.]
+(if: $hakan)[Hakan intenta detener la lucha hablando con los guerreros.]
+(if: $aisha)[Aisha ayuda a las familias a llegar a un lugar seguro.]
+
+(if: $klas or $gisela or $ottavio or $calipso or $hakan or $aisha)[No habría llegado tan lejos sin quienes decidieron acompañarme. Cada cultura es distinta, y eso no la hace peor: cada una destaca en algo, y gracias a esas diferencias logramos superar la aventura.
+
+Pero la aventura aún no termina. Queda la última batalla.
+
+—Lo mismo que hicimos todo el viaje —les digo—. Juntos.
+
+[[Organizar la defensa con mis aliados->El duelo]]](else:)[Miro a mi alrededor y comprendo que no hay nadie que pueda luchar a mi lado. Si intento detener al ejército sin aliados, mi aldea caerá.
+
+[[Defender la aldea por mi cuenta->PERDER - El último vikingo]]]
+
+:: Un nuevo aliado vikingo {"position":"2275,900","size":"100,100"}
+(set: $klas to true)
+
+—Está bien —acepté a regañadientes—. Pero no hables tanto.
+
+—No prometo nada —dijo, soltando una risita.
+
+Volví al barco junto con Klas e izamos las velas para emprender el viaje al nuevo destino: el bosque de las tierras germanas del sur.
+
+[[Continuar->El bosque de Gisela]]
+
+
+:: Un plato roto [Decision] {"position":"2275,1600","size":"100,100"}
+—Gracias Ottavio, pero no estoy seguro de querer comer... esto —dije, apartando el plato.
+
+Ottavio se pone rojo. Deja caer el plato que tenía en la mano, que se rompe en mil pedazos, y nos grita algo en su idioma que no necesita traducción. En segundos estamos en la calle.
+
+(if: $klas)[—Bien hecho, Asvald —dice Klas, muerto de vergüenza—. Por suerte escuché en el puerto algo sobre una vieja prensa de aceite romana.](else:)[—Bueno, pudo haber sido peor —dije, en un tono burlesco.
+
+—No te preocupes, Asvald —dijo Thorgrim—. Alcancé a escuchar por ahí algo sobre una vieja prensa de aceite romana.]
+
+Encontramos la prensa, y su inscripción reveló el siguiente destino: unas ruinas en Grecia.
+
+—No necesitamos a un simple cocinero —dijo Thorgrim—. Sigamos.
+
+No estaba tranquilo con lo sucedido, pero teníamos que seguir avanzando.
+
+[[Volver a pedirle disculpas->La disculpa]]
+(if: $klas)[[[Seguir sin Ottavio->La fiebre]]](else:)[[[Seguir sin Ottavio->Calipso]]]
+
+
+:: Una vida vikinga {"position":"450,300","size":"100,100"}
+(set: $klas to false, $gisela to false, $ottavio to false, $calipso to false, $hakan to false, $aisha to false)
+(set: $espada_curva to true, $orgulloso to false, $barco_danado to false, $thorgrim_muerto to false, $total_aliados to 0)
+
+—¡Ven hijo! Mira lo que ha llegado a la tienda —dijo mi padre.
+
+—Ya voy. Dame un minuto.
+
+Estaba terminando de templar una nueva espada en el taller para su vecino Hippo mientras jugaba con mi hermana Sigrid a las adivinanzas.
+
+<script>sonarLoop("music_cut.mp3");</script>
+
+[[Salir del taller->La sorpresa de su padre]]
+
+:: El fin solitario [GANAR] {"position":"4750,600","size":"100,100"}
+(if: $total_aliados < 4)[Había llegado al final con menos de cuatro aliados. Todos los compañeros que habían viajado conmigo y que estuvieron a mi lado en la última batalla murieron en combate.](else:)[Había reunido a (print: $total_aliados) compañeros, pero no logré reunir a todos los pueblos. En la última batalla, los amigos que me acompañaron murieron tratando de proteger la aldea.]
+
+(if: $klas)[Klas cayó defendiendo el flanco de la aldea.]
+(if: $gisela)[Gisela luchó hasta quedarse sin flechas.]
+(if: $ottavio)[Ottavio protegió a los heridos hasta el último momento.]
+(if: $calipso)[Calipso siguió curando a quienes pudo salvar.]
+(if: $hakan)[Hakan usó sus últimas palabras para pedir que detuvieran la lucha.]
+
+Aun así, logré detener el Ragnarök. Cuando el cielo volvió a despejarse, regresé solo a mi hogar. Abrí la herrería y me convertí en maestro, enseñando a los jóvenes de la aldea todo lo que sabía del metal. Mi trabajo dio paz y propósito a los demás, pero, al caer la noche, el silencio de mi casa me recordaba a quienes no volvieron. Viví sin formar otra familia, dedicado a mi oficio hasta el fin de mis días.
+
+(if: $thorgrim_muerto)[Y aunque el mundo encontró la paz, yo nunca dejé de preguntarme si matar a Thorgrim fue la decisión correcta. Esa duda me acompañó hasta mi último día.]
+
+(text-color:green)[EL FIN: EL MAESTRO SOLITARIO]
+
+[[Jugar de nuevo->Una vida vikinga]]
+
+
+:: El fin con Aisha [GANAR] {"position":"4750,750","size":"100,100"}
+(if: $total_aliados < 4)[Había llegado al final con menos de cuatro aliados. En la última batalla, todos mis compañeros cayeron, salvo Aisha.](else:)[Aunque había reunido a (print: $total_aliados) compañeros, no todos los pueblos habían unido sus fuerzas. En la última batalla, mis compañeros cayeron uno tras otro; solo Aisha sobrevivió conmigo.]
+
+(if: $klas)[Klas murió guiándonos durante la defensa.]
+(if: $gisela)[Gisela agotó sus flechas protegiendo la retirada.]
+(if: $ottavio)[Ottavio se quedó junto a los heridos hasta el final.]
+(if: $calipso)[Calipso no dejó de atender a los heridos mientras pudo.]
+(if: $hakan)[Hakan trató de detener la lucha con palabras hasta su último aliento.]
+
+Aisha y yo conseguimos detener el Ragnarök y volvimos juntos a mi aldea. No teníamos riquezas ni grandes títulos, solo una casa sencilla, mi herrería y la compañía del otro. Aprendimos a vivir en paz y construimos una vida humilde, tranquila y llena de cariño. Envejecer juntos fue suficiente para nosotros, y permanecimos unidos hasta el fin de nuestros días.
+
+(if: $thorgrim_muerto)[Pero incluso en los días más tranquilos, me preguntaba si matar a Thorgrim había sido necesario. Nunca encontré una respuesta que acallara del todo esa duda.]
+
+(text-color:green)[EL FIN: JUNTOS EN PAZ]
+
+[[Jugar de nuevo->Una vida vikinga]]
+
+
+:: Variables [startup] {"position":"150,600","size":"100,100"}
+{
+(set: $klas to false)
+(set: $gisela to false)
+(set: $ottavio to false)
+(set: $calipso to false)
+(set: $hakan to false)
+(set: $aisha to false)
+(set: $espada_curva to true)
+(set: $orgulloso to false)
+(set: $barco_danado to false)
+(set: $thorgrim_muerto to false)
+(set: $total_aliados to 0)
+}
+
+:: StoryScript [script]
+// Carpeta donde están los sonidos (GitHub Pages)
+window.BASE_SONIDOS = "https://joaquindm02.github.io/Herrero_de_las_runas/sonidos/";
+
+// Nombre del archivo de la espada (cámbienlo aquí si lo renombran)
+var ARCHIVO_DECISION = "sword_cut.mp3";
+
+// ---------- Sonidos de escena ----------
+window.sonidos = {};
+
+window.cargarSonido = function (archivo) {
+  if (!sonidos[archivo]) {
+    var a = new Audio(BASE_SONIDOS + archivo);
+    a.preload = "auto";
+    a.load();
+    sonidos[archivo] = a;
+  }
+  return sonidos[archivo];
+};
+
+// Toca un sonido una vez: sonar("archivo.mp3") o sonar("archivo.mp3", 0.5)
+window.sonar = function (archivo, volumen) {
+  try {
+    var a = cargarSonido(archivo);
+    a.loop = false;
+    a.volume = (volumen === undefined) ? 1 : volumen;
+    a.currentTime = 0;
+    a.play().catch(function (err) { console.log("No se pudo reproducir " + archivo + ": " + err); });
+  } catch (err) { console.log("Error con " + archivo + ": " + err); }
+};
+
+// Toca un sonido en loop (si ya está sonando, no lo reinicia)
+window.sonarLoop = function (archivo, volumen) {
+  try {
+    var a = cargarSonido(archivo);
+    a.loop = true;
+    a.volume = (volumen === undefined) ? 1 : volumen;
+    if (a.paused) a.play().catch(function (err) { console.log("No se pudo reproducir " + archivo + ": " + err); });
+  } catch (err) { console.log("Error con " + archivo + ": " + err); }
+};
+
+// Detiene un sonido
+window.parar = function (archivo) {
+  var a = sonidos[archivo];
+  if (a) { a.pause(); a.currentTime = 0; }
+};
+
+// ---------- Sonido de decisión (reproductor propio) ----------
+window.sfxDecision = new Audio(BASE_SONIDOS + ARCHIVO_DECISION);
+sfxDecision.preload = "auto";
+sfxDecision.load();
+
+window.sonarDecision = function () {
+  sfxDecision.pause();
+  sfxDecision.currentTime = 0;
+  sfxDecision.volume = 0.7;
+  sfxDecision.play().catch(function (err) { console.log("No se pudo reproducir la decisión: " + err); });
+};
+
+// ---------- Precarga ----------
+cargarSonido("boom.mp3");
+cargarSonido("cricket.mp3");
+cargarSonido("feast.mp3");
+cargarSonido("forest.mp3");
+cargarSonido("sword.mp3");
+cargarSonido("smith.mp3");
+cargarSonido("sword_cut.mp3");
+cargarSonido("tavern.mp3");
+cargarSonido("waves.mp3");
+cargarSonido("storm.mp3");
+cargarSonido("sword_fight.mp3");
+// Agreguen aquí los demás sonidos de escena: cargarSonido("nombre.mp3");
+
+// ---------- Música de fondo ----------
+//window.musica = new Audio(BASE_SONIDOS + "music_cut.mp3");
+//musica.loop = true;
+//musica.volume = 0.3;
+
+// ---------- Clics en links ----------
+document.addEventListener("click", function (e) {
+  var link = e.target.closest("tw-link, .enchantment-link");
+  if (!link) return;
+
+  //if (musica.paused) musica.play().catch(function () {});
+
+  var escena = link.closest("tw-passage");
+  var esDecision = escena ? !!escena.querySelector(".marca-decision")
+                          : !!document.querySelector(".marca-decision");
+  console.log("Clic en link. ¿Es decisión?", esDecision);
+
+  if (esDecision) sonarDecision();
+}, true);
+
+
+:: Estilo portada e inventario [stylesheet] {"position":"200,750","size":"100,100"}
+:root {
+  --bg: #14110f;
+  --panel: #1f1a17;
+  --text: #e8dcc8;
+  --muted: #a8998a;
+  --accent: #e0803a;
+  --malo: #c0503a;
+}
+html, body { background-color: var(--bg); }
+tw-story {
+  background: radial-gradient(circle at 50% 20%, #2a1f18, var(--bg) 70%) fixed var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+tw-passage { padding-bottom: 5em; }
+tw-link, .enchantment-link { color: var(--accent); }
+tw-link.visited { color: #c46a30; }
+tw-link:hover, .enchantment-link:hover { color: #ffb070; }
+img.sprite, .portada-img { image-rendering: pixelated; }
+
+/* ---------- Portada ---------- */
+.portada { position: relative; border: 2px solid #3a2c22; }
+.portada-img { display: block; width: 100%; height: auto; }
+.portada-titulo {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: 4% 4% 10%;
+  text-align: center;
+  background: linear-gradient(rgba(20,17,15,0.85), transparent);
+}
+.portada-titulo h1 {
+  margin: 0.2em 0;
+  font-size: clamp(1.4rem, 4.5vw, 2.6rem);
+  line-height: 1.15;
+  text-shadow: 0 2px 6px #000;
+}
+.runas { color: var(--accent); letter-spacing: 0.5em; opacity: 0.85; }
+.subtitulo { margin: 0; font-style: italic; text-shadow: 0 1px 4px #000; }
+.portada-botones {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+  margin: 1.5em 0;
+}
+.portada-botones tw-link {
+  padding: 0.6em 1.4em;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+}
+.portada-botones tw-link:hover { background: var(--accent); color: var(--bg); }
+.creditos { text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Instrucciones ---------- */
+.instrucciones li { margin-bottom: 0.6em; }
+.retrato-grande { float: right; width: 144px; margin: 0 0 1em 1em; border: 2px solid #3a2c22; }
+.consejo { font-style: italic; color: var(--muted); clear: both; }
+
+/* ---------- Retrato de escena ---------- */
+.retrato { float: right; margin: 0 0 1em 1.2em; text-align: center; }
+.retrato img { width: 144px; height: 144px; border: 2px solid #3a2c22; display: block; }
+.retrato figcaption { color: var(--accent); font-size: 0.9rem; margin-top: 0.3em; }
+@media (max-width: 540px) {
+  .retrato, .retrato-grande { float: none; margin: 0 auto 1em; width: fit-content; }
+  .retrato-grande { display: block; }
+}
+
+/* ---------- Avisos ---------- */
+.avisos {
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+  z-index: 60; display: flex; flex-direction: column; gap: 8px;
+  pointer-events: none; width: max-content; max-width: calc(100vw - 32px);
+}
+.aviso {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--panel); border: 1px solid var(--accent); border-radius: 6px;
+  padding: 6px 14px 6px 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  animation: aviso 4s ease forwards;
+}
+.aviso img { width: 48px; height: 48px; }
+.aviso-malo { border-color: var(--malo); }
+@keyframes aviso {
+  0% { opacity: 0; transform: translateY(-12px); }
+  10%, 80% { opacity: 1; transform: none; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Inventario ---------- */
+.inventario { position: fixed; right: 16px; bottom: 16px; z-index: 50; }
+.inventario summary {
+  list-style: none; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--accent); border-radius: 6px;
+  padding: 0.5em 1em; color: var(--accent);
+}
+.inventario summary::-webkit-details-marker { display: none; }
+.inventario-panel {
+  position: absolute; right: 0; bottom: calc(100% + 8px);
+  width: min(420px, calc(100vw - 32px)); max-height: 70vh; overflow-y: auto;
+  background: var(--panel); border: 1px solid #3a2c22; border-radius: 6px;
+  padding: 0.5em 1em 1em;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  font-size: 1rem; line-height: 1.35;
+}
+.inventario-panel h3 { color: var(--accent); margin: 0.8em 0 0.4em; font-size: 1.05rem; }
+.grilla { display: flex; flex-direction: column; gap: 10px; }
+.ficha { display: flex; gap: 10px; align-items: center; }
+.ficha img { width: 64px; height: 64px; flex: none; border: 1px solid #3a2c22; background: var(--bg); }
+.ficha b { display: block; }
+.ficha small { display: block; color: var(--muted); font-size: 0.85rem; }
+.vacio { color: var(--muted); font-style: italic; margin: 0; }
